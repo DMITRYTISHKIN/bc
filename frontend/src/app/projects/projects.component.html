@@ -1,0 +1,42 @@
+<div class="projects">
+  <div class="projects-content">
+    <h2>Примеры работ</h2>
+    <div class="projects-toolbar">
+      <ng-select
+        class="project-select-areas"
+        [items]="areas"
+        placeholder="Все творческие области"
+        bindLabel="NAME"
+        bindValue="ID"
+        [(ngModel)]="selectSection"
+      ></ng-select>
+      <ng-select
+        class="project-select-themes"
+        [items]="themes"
+        placeholder="Все специализации"
+        bindLabel="NAME"
+        bindValue="ID"
+        [(ngModel)]="selectTheme"
+      ></ng-select>
+    </div>
+    <div class="projects-container">
+      <div clas="projects-sizer"></div>
+      <div
+        class="projects-item"
+        *ngFor="let item of data"
+      >
+        <img src="{{ item.PREVIEW_IMAGE }}" />
+        <div class="project-description">
+          <div>
+            <p>{{ item.SECTION }}</p>
+            <h3>{{ item.NAME }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-search">
+      <input type="text" placeholder="Поиск по сайту" />
+      <div class="icon icon-searchful"></div>
+    </div>
+  </div>
+</div>

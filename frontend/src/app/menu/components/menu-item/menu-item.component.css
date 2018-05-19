@@ -1,0 +1,36 @@
+.menu-popper-groups {
+  float: left;
+  column-gap: 0;
+  column-count: 2;
+  counter-reset: item-counter;
+
+  padding: 10px 0px 30px 50px;
+}
+
+.menu-popper-group ul li {
+  width: calc(100% - 50px);
+  margin-right: 50px;
+}
+
+.menu-popper-info {
+  float: right;
+
+  padding: 25px 30px;
+
+  background-color: #F7F7FF;
+}
+
+.menu-popper-info h5 {
+  color: black;
+}
+
+.menu-popper-info p {
+  line-height: normal;
+}
+
+.menu-popper-group {
+  break-inside: avoid-column;
+  counter-increment: item-counter;
+  float: left;
+}
+

@@ -1,0 +1,39 @@
+<button
+  class="menu-item"
+  [popper]="production"
+  popperTrigger="click"
+  popperPlacement="top"
+  popperBoundaries="#menu-popper-container"
+  popperApplyClass="menu-popper"
+  popperApplyArrowClass="menu-popper-arrow"
+><ng-content></ng-content></button>
+<popper-content #production>
+  <div class="menu-popper-container">
+    <div
+      [style.width.%]="menuSize"
+      [style.column-count]="columnCount"
+      class="menu-popper-section menu-popper-groups"
+    >
+      <div
+        class="menu-popper-group"
+        *ngFor="let item of data"
+      >
+        <h5>{{ item.group }}</h5>
+        <ul>
+          <li
+            *ngFor="let elem of item.items"
+            (mouseenter)="onHoverItem(elem)"
+          >{{ elem.NAME }}</li>
+        </ul>
+      </div>
+    </div>
+    <div
+      [style.width.%]="infoSize"
+      class="menu-popper-section menu-popper-info"
+    >
+      <div class="icon icon-info-menu"></div>
+      <h5>{{ info.NAME }}</h5>
+      <p [innerHTML]="info.NOTE"></p>
+    </div>
+  </div>
+</popper-content>

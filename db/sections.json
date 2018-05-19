@@ -1,0 +1,207 @@
+{ 
+    "_id" : ObjectId("5aed8bdb4d749908e59d80ec"), 
+    "NAME" : "Video production", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9bde3d3a1c42e02dde26")
+}
+{ 
+    "_id" : ObjectId("5aed8cd34d749908e59d80ed"), 
+    "NAME" : "3d производство", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9bde3d3a1c42e02dde26")
+}
+{ 
+    "_id" : ObjectId("5aed91f93d3a1c42e02ddd6d"), 
+    "NAME" : "Анимация", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9bde3d3a1c42e02dde26")
+}
+{ 
+    "_id" : ObjectId("5aed92ea3d3a1c42e02ddd76"), 
+    "NAME" : "Фото", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9bde3d3a1c42e02dde26")
+}
+{ 
+    "_id" : ObjectId("5aed93203d3a1c42e02ddd77"), 
+    "NAME" : "3d тур", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9bde3d3a1c42e02dde26")
+}
+{ 
+    "_id" : ObjectId("5aed93343d3a1c42e02ddd78"), 
+    "NAME" : "Music production", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9bde3d3a1c42e02dde26")
+}
+{ 
+    "_id" : ObjectId("5aed935a3d3a1c42e02ddd7c"), 
+    "NAME" : "Создание сайтов", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9c693d3a1c42e02dde29")
+}
+{ 
+    "_id" : ObjectId("5aed93763d3a1c42e02ddd7d"), 
+    "NAME" : "Разработка логотипов", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9c693d3a1c42e02dde29")
+}
+{ 
+    "_id" : ObjectId("5aed938c3d3a1c42e02ddd7e"), 
+    "NAME" : "Фирменный стиль", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9c693d3a1c42e02dde29")
+}
+{ 
+    "_id" : ObjectId("5aed939c3d3a1c42e02ddd7f"), 
+    "NAME" : "Полиграфический дизайн", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9c693d3a1c42e02dde29")
+}
+{ 
+    "_id" : ObjectId("5aed93ac3d3a1c42e02ddd80"), 
+    "NAME" : "Арт искусство / граффити", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9c693d3a1c42e02dde29")
+}
+{ 
+    "_id" : ObjectId("5aed93bb3d3a1c42e02ddd81"), 
+    "NAME" : "Дизайн интерьеров", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cea3d3a1c42e02dde3e")
+}
+{ 
+    "_id" : ObjectId("5aed93cc3d3a1c42e02ddd82"), 
+    "NAME" : "Архитектура", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cea3d3a1c42e02dde3e")
+}
+{ 
+    "_id" : ObjectId("5aed93db3d3a1c42e02ddd83"), 
+    "NAME" : "Выставочные стенды", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cea3d3a1c42e02dde3e")
+}
+{ 
+    "_id" : ObjectId("5aed93ec3d3a1c42e02ddd84"), 
+    "NAME" : "Промышленный дизайн", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cea3d3a1c42e02dde3e")
+}
+{ 
+    "_id" : ObjectId("5aed93f93d3a1c42e02ddd85"), 
+    "NAME" : "Программирование / IT", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cfb3d3a1c42e02dde3f")
+}
+{ 
+    "_id" : ObjectId("5aed940e3d3a1c42e02ddd86"), 
+    "NAME" : "Разработка мобильных приложений", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cfb3d3a1c42e02dde3f")
+}
+{ 
+    "_id" : ObjectId("5aed94193d3a1c42e02ddd87"), 
+    "NAME" : "Разработка игр", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cfb3d3a1c42e02dde3f")
+}
+{ 
+    "_id" : ObjectId("5aed94273d3a1c42e02ddd88"), 
+    "NAME" : "Защита информации", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cfb3d3a1c42e02dde3f")
+}
+{ 
+    "_id" : ObjectId("5aed94373d3a1c42e02ddd89"), 
+    "NAME" : "Создание баз данных", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9cfb3d3a1c42e02dde3f")
+}
+{ 
+    "_id" : ObjectId("5aed958e3d3a1c42e02ddde6"), 
+    "NAME" : "Продвижение в социальных сетях (SMM)", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d413d3a1c42e02dde40")
+}
+{ 
+    "_id" : ObjectId("5aed95e83d3a1c42e02dddf1"), 
+    "NAME" : "Контекстная реклама (SEA)", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d413d3a1c42e02dde40")
+}
+{ 
+    "_id" : ObjectId("5aed96063d3a1c42e02dddf2"), 
+    "NAME" : "Yandex, Google | direct marketing", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d413d3a1c42e02dde40")
+}
+{ 
+    "_id" : ObjectId("5aed96173d3a1c42e02dddf3"), 
+    "NAME" : "Поисковая система (SEO)", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d413d3a1c42e02dde40")
+}
+{ 
+    "_id" : ObjectId("5aed96283d3a1c42e02dddf4"), 
+    "NAME" : "Стратегии / исследования", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d413d3a1c42e02dde40")
+}
+{ 
+    "_id" : ObjectId("5aed963b3d3a1c42e02dddf5"), 
+    "NAME" : "Создание каналов на YouTube", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d413d3a1c42e02dde40")
+}
+{ 
+    "_id" : ObjectId("5aed964b3d3a1c42e02dddf6"), 
+    "NAME" : "Промо мероприятия", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d4f3d3a1c42e02dde41")
+}
+{ 
+    "_id" : ObjectId("5aed96593d3a1c42e02dddf7"), 
+    "NAME" : "TV реклама", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d4f3d3a1c42e02dde41")
+}
+{ 
+    "_id" : ObjectId("5aed966d3d3a1c42e02dddf8"), 
+    "NAME" : "Product placement", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d4f3d3a1c42e02dde41")
+}
+{ 
+    "_id" : ObjectId("5aed96863d3a1c42e02dddf9"), 
+    "NAME" : "Банерная реклама", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d4f3d3a1c42e02dde41")
+}
+{ 
+    "_id" : ObjectId("5aed96953d3a1c42e02dddfa"), 
+    "NAME" : "Реклама на транспорте", 
+    "NOTE" : "", 
+    "GROUP_ID" : ObjectId("5aed9d4f3d3a1c42e02dde41")
+}
+{ 
+    "_id" : ObjectId("5aed96ae3d3a1c42e02dddfb"), 
+    "NAME" : "Start", 
+    "NOTE" : "Весь спектр услуг по видеопроизводству (корпоративные фильмы, фильмы о продукте, оборудовании, презентационные видео, промышленные документальные и художественные фильмы).", 
+    "DESCRIPTION" : "Малым и средним предприятиям", 
+    "GROUP_ID" : ObjectId("5aed9d683d3a1c42e02dde42")
+}
+{ 
+    "_id" : ObjectId("5aed96bb3d3a1c42e02dddfc"), 
+    "NAME" : "Premium", 
+    "NOTE" : "", 
+    "DESCRIPTION" : "Крупный бизнес", 
+    "GROUP_ID" : ObjectId("5aed9d6e3d3a1c42e02dde43")
+}
+{ 
+    "_id" : ObjectId("5aed96c73d3a1c42e02dddfd"), 
+    "NAME" : "Подароные сертификаты", 
+    "NOTE" : "", 
+    "DESCRIPTION" : "Для частных лиц", 
+    "GROUP_ID" : ObjectId("5aed9d7a3d3a1c42e02dde44")
+}

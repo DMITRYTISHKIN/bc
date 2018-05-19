@@ -1,0 +1,38 @@
+.footer-slider {
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+
+.footer-slider-content {
+  width: 1050px;
+  margin: 40px auto;
+}
+
+.footer-slider-content h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #2B468B;
+
+}
+
+.footer-slider-item {
+  height: 57px;
+  width: 80px;
+  margin: 0 auto;
+}
+
+.footer-slider-content .slick-prev,
+.footer-slider-content .slick-next {
+  top: 36%;
+  opacity: 1;
+}
+
+.footer-slider-content  .slick-prev {
+  left: -50px;
+}
+
+.footer-slider-content  .slick-next {
+  right: -50px;
+}

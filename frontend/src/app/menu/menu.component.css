@@ -1,0 +1,170 @@
+.menu {
+  background-color: #2B468B;
+
+  height: 60px;
+}
+
+.menu-content {
+  position: relative;
+  width: 1140px;
+  height: inherit;
+
+  line-height: 60px;
+
+  margin: 0 auto;
+}
+
+.menu-content nav {
+  float: left;
+  width: 70%;
+  height: inherit;
+}
+
+.menu-item {
+  display: inline-block;
+  height: 60px;
+
+  color: white;
+  font-size: 17px;
+
+  border: none;
+  background: transparent;
+
+  margin-right: 60px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-item:hover {
+  color: #FF7800;
+}
+
+.menu-item:focus {
+  color: #FF7800;
+  outline: none;
+}
+
+.menu-popper {
+  border: none !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
+  width: 100% !important;
+  margin: 60px 0 0 0 !important;
+  background-color: #FFFFFF !important;
+  padding: 0 !important;
+  transform: none !important;
+  z-index: 999;
+  border-radius: 0 !important;
+}
+
+.menu-popper-arrow {
+  border-width: 0 10px 10px 10px !important;
+  border-color: transparent transparent #FFFFFF transparent !important;
+  margin: -5px 0 0 0 !important;
+}
+
+#menu-popper-container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.menu-popper-container {
+  display: flex;
+}
+
+.menu-popper-section {
+  height: auto;
+
+  padding: 10px 0px 30px 30px;
+}
+
+.menu-popper-section h5 {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2B468B;
+}
+
+.menu-popper-section li {
+  width: calc(100% - 30px);
+  float: left;
+
+  font-size: 14px;
+  list-style: none;
+  line-height: normal;
+  cursor: pointer;
+
+  border-bottom: solid 1px #E1E1E1;
+  margin-right: 30px;
+  padding: 10px 0;
+}
+
+
+.menu-popper-section li:hover {
+  color: #FF7800;
+}
+
+.icon-info-menu {
+  width: 26px;
+  height: 26px;
+}
+
+.icon-download {
+  float: left;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.button-download {
+  margin-top: 70px;
+  display: inline-block;
+  border: #2B468B solid 2px;
+  padding: 7px 25px;
+  line-height: 24px;
+  font-size: 17px;
+  color: #2B468B;
+  cursor: pointer;
+}
+
+.button-download:hover {
+  background-color: #FF4200;
+}
+
+.icon-search {
+  width: 25px;
+  height: 25px;
+  float: right;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-search:focus,
+.icon-search:active {
+  outline: none;
+}
+
+.menu-search {
+  float: right;
+  width: 25%;
+  padding: 17px 0;
+}
+
+.menu-search-input {
+  width: calc(100% - 35px);
+  float: left;
+  height: 25px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  padding: 0 5px;
+  background-color: transparent;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.menu-search-input:focus {
+  background-color: white;
+  opacity: 1;
+}

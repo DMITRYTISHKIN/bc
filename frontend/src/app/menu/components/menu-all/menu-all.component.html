@@ -1,0 +1,33 @@
+<button
+  class="menu-item"
+  [popper]="all"
+  popperTrigger="click"
+  popperPlacement="top"
+  popperBoundaries="#menu-popper-container"
+  popperApplyClass="menu-popper"
+  popperApplyArrowClass="menu-popper-arrow"
+>Все продукты</button>
+<popper-content #all>
+  <div class="menu-popper-container">
+    <div class="menu-popper-section menu-popper-production">
+      <h5>Производство</h5>
+      <ul>
+        <li
+          *ngFor="let item of data.production"
+        >{{ item }}</li>
+      </ul>
+    </div
+    ><div class="menu-popper-section menu-popper-promotion">
+      <h5>Продвижение</h5>
+      <ul>
+        <li *ngFor="let item of data.promotion">{{ item }}</li>
+      </ul>
+    </div
+    ><div class="menu-popper-section menu-popper-packages">
+      <h5>Комплексные пакеты услуг</h5>
+      <ul>
+        <li *ngFor="let item of data.packages">{{ item }}</li>
+      </ul>
+    </div>
+  </div>
+</popper-content>

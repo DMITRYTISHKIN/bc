@@ -1,0 +1,22 @@
+<div class="menu">
+  <div class="menu-content">
+    <nav>
+      <bc-menu-all></bc-menu-all>
+      <bc-menu-item>Производство</bc-menu-item>
+      <bc-menu-item>Продвижение</bc-menu-item>
+      <bc-menu-item [menuSize]="35">Комплексные пакеты услуг</bc-menu-item>
+    </nav>
+    <div class="menu-search">
+      <input
+        #searchInput
+        class="menu-search-input"
+        type="text"
+      />
+      <button
+        (click)="onSearch($event)"
+        class="icon icon-search"
+      ></button>
+    </div>
+  </div>
+  <div id="menu-popper-container"></div>
+</div>

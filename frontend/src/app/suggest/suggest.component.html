@@ -1,0 +1,55 @@
+<div class="suggest-content">
+<div class="suggest-slider">
+  <div class="suggest-slider-item suggest-slider-item-1">
+    <div>
+      <h2>Brandclick:</h2>
+      <p>Реклама в один клик</p>
+    </div>
+  </div>
+  <div class="suggest-slider-item suggest-slider-item-2">
+    <div>
+      <h2>brandclick:</h2>
+      <p>Сервис для заказа рекламы<br>и творческих продуктов</p>
+    </div>
+  </div>
+  <div class="suggest-slider-item suggest-slider-item-3">
+    <div>
+      <h2>Объединяем</h2>
+      <p>Творческих исполнителей и<br>промышленные предприятия</p>
+    </div>
+  </div>
+  <div class="suggest-slider-item suggest-slider-item-4">
+    <div>
+      <p>Лучшие условия<br>на рынке рекламы</p>
+    </div>
+  </div>
+  <div class="suggest-slider-item suggest-slider-item-5">
+    <div>
+      <p>Нам доверяют<br>сильные</p>
+    </div>
+  </div>
+</div><div class="suggest">
+  <h2>Популярные услуги</h2>
+  <button
+    class="suggest-button"
+    #suggestButton
+    (click)="setActiveDirection($event.target, 'production')"
+  >
+    Производство
+  </button><button
+    class="suggest-button"
+    #suggestButton
+    (click)="setActiveDirection($event.target, 'promotion')"
+  >
+    Продвижение
+  </button>
+  <ul>
+    <li *ngFor="let item of currentData.data">{{ item.NAME }}</li>
+  </ul>
+  <button
+    class="suggest-info-button"
+  >
+    <i class="icon icon-question"></i> Как работает сервис БК
+  </button>
+</div>
+</div>

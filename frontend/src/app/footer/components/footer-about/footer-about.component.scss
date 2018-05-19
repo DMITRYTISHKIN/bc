@@ -1,0 +1,56 @@
+.footer-about {
+  background-color: #2B468B;
+  color: white;
+}
+
+.footer-about-content {
+  width: 1140px;
+  margin: 0 auto;
+  height: 300px;
+  padding:  30px 0;
+}
+
+.footer-about-note {
+  float: left;
+  width: 45%;
+}
+
+
+.footer-about-note h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.footer-about-note button {
+  border: 1px white solid;
+  padding: 7px 20px;
+  background-color: transparent;
+  color: white;
+  line-height: 22px;
+  font-size: 15px;
+}
+
+.footer-about-note p {
+  margin: 20px 0;
+}
+
+.footer-about-employers,
+.footer-about-works {
+  padding: 20px;
+  float: left;
+  width: 27%;
+  border-left: 1px white solid;
+  height: 100%;
+}
+.footer-about-employers h4,
+.footer-about-works h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.footer-about-employers h2,
+.footer-about-works h2 {
+  font-size: 70px;
+  font-weight: 500;
+}

@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansBold/OpenSansBold.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansBold/OpenSansBold.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansBold/OpenSansBold.woff) format("woff");
+
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansBoldItalic/OpenSansBoldItalic.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansBoldItalic/OpenSansBoldItalic.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansBoldItalic/OpenSansBoldItalic.woff) format("woff");
+
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansExtraBold/OpenSansExtraBold.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansExtraBold/OpenSansExtraBold.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansExtraBold/OpenSansExtraBold.woff) format("woff");
+
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansExtraBoldItalic/OpenSansExtraBoldItalic.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansExtraBoldItalic/OpenSansExtraBoldItalic.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansExtraBoldItalic/OpenSansExtraBoldItalic.woff) format("woff");
+
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansItalic/OpenSansItalic.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansItalic/OpenSansItalic.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansItalic/OpenSansItalic.woff) format("woff");
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansLight/OpenSansLight.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansLight/OpenSansLight.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansLight/OpenSansLight.woff) format("woff");
+
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansLightItalic/OpenSansLightItalic.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansLightItalic/OpenSansLightItalic.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansLightItalic/OpenSansLightItalic.woff) format("woff");
+
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansRegular/OpenSansRegular.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansRegular/OpenSansRegular.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansRegular/OpenSansRegular.woff) format("woff");
+
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansRegularItalic/OpenSansRegularItalic.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansRegularItalic/OpenSansRegularItalic.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansRegularItalic/OpenSansRegularItalic.woff) format("woff");
+
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansSemiBold/OpenSansSemiBold.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansSemiBold/OpenSansSemiBold.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansSemiBold/OpenSansSemiBold.woff) format("woff");
+
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(./assets/fonts/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.eot);
+  src: local(OpenSans),
+  url(./assets/fonts/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.ttf) format("truetype"),
+  url(./assets/fonts/OpenSansSemiBoldItalic/OpenSansSemiBoldItalic.woff) format("woff");
+
+  font-weight: 600;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 900px;
+}
+
+body {
+  min-width: 1180px;
+  font-family: OpenSans;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.icon.icon-logo {
+  background-image: url(./assets/images/logo.png);
+}
+
+.icon.icon-me {
+  background-image: url(./assets/images/modals/me.png);
+}
+
+.icon.icon-download {
+  background-image: url(./assets/images/download.png);
+}
+
+.icon.icon-info{
+  background-image: url(./assets/images/info.png);
+}
+
+.icon.icon-info-menu{
+  background-image: url(./assets/images/info-menu.png);
+}
+
+.icon.icon-add{
+  background-image: url(./assets/images/add.png);
+}
+
+.icon.icon-heart{
+  background-image: url(./assets/images/heart.png);
+}
+
+.icon.icon-question:after {
+  float: left;
+  content: '';
+  background-image: url(./assets/images/question.png);
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+}
+
+.icon.icon-add {
+  display: inline-block;
+  margin: -5px 10px;
+  content: '';
+  background-image: url(./assets/images/add.png);
+  height: 22px;
+  width: 22px;
+}
+
+.icon.icon-info {
+  display: inline-block;
+  margin: -5px 10px;
+  content: '';
+  background-image: url(./assets/images/info.png);
+  height: 22px;
+  width: 22px;
+}
+
+.icon.icon-heart {
+  float: left;
+  content: '';
+  background-image: url(./assets/images/heart.png);
+  height: 22px;
+  width: 22px;
+  margin-right: 15px;
+}
+
+.icon.icon-search{
+  background-image: url(./assets/images/search.png);
+}
+
+.icon.icon-searchful{
+  background-image: url(./assets/images/searchful.png);
+}
+
+.icon.icon-fb{
+  background-image: url(./assets/images/fb.png);
+}
+
+.icon.icon-vk{
+  background-image: url(./assets/images/vk.png);
+}
+
+.icon.icon-insta{
+  background-image: url(./assets/images/insta.png);
+}
+
+/* Modals icons */
+.icon.icon-modals-insta{
+  background-image: url(./assets/images/modals/insta.png);
+}
+
+.icon.icon-modals-fb{
+  background-image: url(./assets/images/modals/fb.png);
+}
+
+.icon.icon-modals-vk{
+  background-image: url(./assets/images/modals/vk.png);
+}
+
+.icon.icon-modals-info{
+  background-image: url(./assets/images/modals/info.png);
+}
+
+.icon.icon-modals-marker{
+  background-image: url(./assets/images/modals/marker.png);
+}
+
+.icon.icon-modals-phone{
+  background-image: url(./assets/images/modals/phone.png);
+}
+
+.icon.icon-modals-close{
+  background-image: url(./assets/images/modals/close.png);
+}
+
+.suggest-slider-item-1 {
+  background: url(./assets/images/main/slider-photo-1.jpg) no-repeat;
+}
+
+.suggest-slider-item-2 {
+  background: url(./assets/images/main/slider-photo-2.jpg) no-repeat;
+}
+
+.suggest-slider-item-3 {
+  background: url(./assets/images/main/slider-photo-3.jpg) no-repeat;
+}
+
+.suggest-slider-item-4 {
+  background: url(./assets/images/main/slider-photo-4.jpg) no-repeat;
+}
+
+.suggest-slider-item-5 {
+  background: url(./assets/images/main/slider-photo-5.jpg) no-repeat;
+}
+
+.footer-offer-left {
+  background: url(./assets/images/work.jpg) no-repeat;
+}
+
+.footer-offer-right {
+  background: url(./assets/images/help.jpg) no-repeat;
+}
+
+.footer-slider-content .slick-prev:before {
+  content: url(./assets/images/withUs/left.png);
+}
+
+.footer-slider-content .slick-next:before {
+  content: url(./assets/images/withUs/right.png);
+}
+
+.content {
+  width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

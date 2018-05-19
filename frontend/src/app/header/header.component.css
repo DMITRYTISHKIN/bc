@@ -1,0 +1,73 @@
+
+.header {
+  overflow: hidden;
+  height: 80px;
+  background-color: #EBEBEB;
+}
+
+.header-content {
+  width: 1140px;
+  margin: 0 auto;
+  background-color: #EBEBEB;
+}
+
+.header-left {
+  float: left;
+  width: 70%;
+  line-height: 80px;
+}
+
+.header-logo-container {
+  display: inline-block;
+  text-align: left;
+  padding: 15px 30px 15px 0;
+}
+
+.header-icon-logo {
+  width: 150px;
+  height: 50px;
+  float: left;
+}
+
+.header-note-container {
+  display: inline-block;
+
+  color: #A5A5A5;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+
+  vertical-align: top;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding: 20px 0;
+}
+
+.header-phone-container {
+  display: inline-block;
+
+  color: #2B468B;
+  font-size: 16px;
+  font-weight: 600;
+
+  vertical-align: top;
+  margin-left: 30px;
+}
+
+.header-right {
+  float: right;
+  width: 30%;
+
+  text-align: right;
+  line-height: 80px;
+}
+
+.header-info {
+  display: inline-block;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+
+  margin-left: 20px;
+}

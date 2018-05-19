@@ -1,0 +1,72 @@
+.footer-contacts {
+  background-color: #2B374E;
+  color: white;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.footer-contacts-content {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.footer-contacts-social {
+  width: 33%;
+  float: left;
+}
+
+.footer-contacts-pages {
+  width: 50%;
+  float: left;
+
+  margin-bottom: 40px;
+}
+
+.footer-contacts-pages div {
+  width: 35%;
+  margin-right: 60px;
+  float: left;
+  border-bottom: 1px #485165 solid;
+  padding: 7px 0;
+}
+
+.footer-contacts-pages div:hover {
+  color: #FF7800;
+  cursor: pointer;
+}
+
+.footer-contacts-pages h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.footer-contacts-social h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.footer-contacts-social .icon {
+  background-size: cover;
+  background-position: 0 0;
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+.footer-contacts-social .icon:hover {
+  background-position: 0 -50px;
+}
+
+.footer-contacts-copyright {
+  border-top: 1px #485165 solid;
+  width: 100%;
+  overflow: hidden;
+  text-align: right;
+  padding: 10px 0;
+}

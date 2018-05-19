@@ -1,0 +1,15 @@
+{ 
+    "_id" : ObjectId("5aed81c687bc135801cbbdc0"), 
+    "NAME" : "Производство", 
+    "NOTE" : ""
+}
+{ 
+    "_id" : ObjectId("5aed81ed87bc135801cbbdc1"), 
+    "NAME" : "Продвижение", 
+    "NOTE" : ""
+}
+{ 
+    "_id" : ObjectId("5aed820487bc135801cbbdc2"), 
+    "NAME" : "Комплексные пакеты услуг", 
+    "NOTE" : ""
+}

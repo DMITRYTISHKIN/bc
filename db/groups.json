@@ -1,0 +1,54 @@
+{ 
+    "_id" : ObjectId("5aed9bde3d3a1c42e02dde26"), 
+    "NAME" : "Media", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed81c687bc135801cbbdc0")
+}
+{ 
+    "_id" : ObjectId("5aed9c693d3a1c42e02dde29"), 
+    "NAME" : "Digital | style", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed81c687bc135801cbbdc0")
+}
+{ 
+    "_id" : ObjectId("5aed9cea3d3a1c42e02dde3e"), 
+    "NAME" : "Architecture design | interior", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed81c687bc135801cbbdc0")
+}
+{ 
+    "_id" : ObjectId("5aed9cfb3d3a1c42e02dde3f"), 
+    "NAME" : "Programming | IT", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed81c687bc135801cbbdc0")
+}
+{ 
+    "_id" : ObjectId("5aed9d413d3a1c42e02dde40"), 
+    "NAME" : "Internet", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed81ed87bc135801cbbdc1")
+}
+{ 
+    "_id" : ObjectId("5aed9d4f3d3a1c42e02dde41"), 
+    "NAME" : "Non internet", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed81ed87bc135801cbbdc1")
+}
+{ 
+    "_id" : ObjectId("5aed9d683d3a1c42e02dde42"), 
+    "NAME" : "Start", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed820487bc135801cbbdc2")
+}
+{ 
+    "_id" : ObjectId("5aed9d6e3d3a1c42e02dde43"), 
+    "NAME" : "Premium", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed820487bc135801cbbdc2")
+}
+{ 
+    "_id" : ObjectId("5aed9d7a3d3a1c42e02dde44"), 
+    "NAME" : "Подарочные сертификаты", 
+    "NOTE" : "", 
+    "DIRECTION_ID" : ObjectId("5aed820487bc135801cbbdc2")
+}
