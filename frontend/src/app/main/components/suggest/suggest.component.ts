@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewEncapsulation, ViewChildren, ElementRef,
   QueryList, Renderer2, AfterViewInit } from '@angular/core';
+
+import { NgxSmartModalService } from 'ngx-smart-modal';
+
 declare var $: any;
 
 @Component({
@@ -97,6 +100,7 @@ export class SuggestComponent implements OnInit, AfterViewInit {
   }
 
   constructor(
+    public dialog: NgxSmartModalService,
     private _r: Renderer2
   ) { }
 

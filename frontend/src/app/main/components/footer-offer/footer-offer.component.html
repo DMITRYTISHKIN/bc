@@ -1,0 +1,48 @@
+<div class="footer-offer">
+  <div class="footer-offer-content">
+    <div class="footer-offer-left">
+      <div class="footer-offer-left-content">
+        <p>Стань частью команды БК</p>
+        <button
+          (click)="dialog.getModal('modalJoin').open()"
+        >
+          <i class="icon icon-add"></i>
+          Присоединиться
+        </button>
+      </div>
+    </div><div class="footer-offer-right">
+      <div class="footer-offer-right-content">
+        <p>Чем полезен наш сервис?</p>
+        <button
+          (click)="dialog.getModal('modalAnswer').open()"
+        >
+          <i class="icon icon-info"></i>
+          Ответ!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngx-smart-modal #modalJoin identifier="modalJoin" class="modal-join">
+  <div class="modal-header">
+    <div class="modal-logo"></div>
+    <h3 class="modal-title">Стать частью команды БК</h3>
+  </div>
+  <div class="modal-content">
+    <p>Если ты творческий и креативный, профессионал в своем деле, отправляй свои работы и информацию о себе на почту:</p>
+    <div class="modal-join-footer">
+      <a href="mailto:start@energizes.ru"><div class="icon icon-modals-phone"></div><p>start@energizes.ru</p></a>
+    </div>
+  </div>
+</ngx-smart-modal>
+
+<ngx-smart-modal #modalAnswer identifier="modalAnswer" class="modal-answer">
+  <div class="modal-header">
+    <div class="modal-logo"></div>
+    <h3 class="modal-title">Чем полезен наш сервис?</h3>
+  </div>
+  <div class="modal-content">
+    <p><b>Методика Energizes</b> - совокупность методов, позволяющих в сжатые сроки определить цель проекта, который больше всего близок к техническому заданию заказчика. В результате этого</p>
+  </div>
+</ngx-smart-modal>

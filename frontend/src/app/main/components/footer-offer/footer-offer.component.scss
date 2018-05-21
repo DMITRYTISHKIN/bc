@@ -50,3 +50,42 @@
 .footer-offer-left-content button {
   background-color: #2B468B;
 }
+
+.modal-join {
+  .modal-content {
+    > p {
+      margin-bottom: 35px;
+    }
+
+    .modal-join-footer {
+      color: #FF7800;
+      line-height: 22px;
+      width: 180px;
+      margin: 0 auto;
+
+      .icon {
+        float: left;
+        margin-right: 15px;
+      }
+
+      p {
+        float: right;
+      }
+    }
+
+  }
+}
+
+
+.modal-answer {
+  .modal-content {
+    p {
+      text-align: justify;
+      line-height: 25px;
+    }
+    b {
+      color: #FF7800;
+    }
+  }
+
+}

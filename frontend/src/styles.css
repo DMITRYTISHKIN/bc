@@ -136,10 +136,11 @@ html, body {
 body {
   min-width: 1180px;
   font-family: OpenSans;
+  overflow: auto !important;
 }
 
 a {
-  color: black;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -166,6 +167,20 @@ button:active {
 
 .icon.icon-me {
   background-image: url(./assets/images/modals/me.png);
+  width: 70px;
+  height: 36px;
+}
+
+.icon.icon-energizes {
+  background-image: url(./assets/images/modals/energizes.png);
+  width: 56px;
+  height: 45px;
+}
+
+.icon.icon-fox {
+  background-image: url(./assets/images/modals/fox.png);
+  width: 84px;
+  height: 78px;
 }
 
 .icon.icon-download {
@@ -247,14 +262,20 @@ button:active {
 /* Modals icons */
 .icon.icon-modals-insta{
   background-image: url(./assets/images/modals/insta.png);
+  width: 33px;
+  height: 33px;
 }
 
 .icon.icon-modals-fb{
   background-image: url(./assets/images/modals/fb.png);
+  width: 33px;
+  height: 33px;
 }
 
 .icon.icon-modals-vk{
   background-image: url(./assets/images/modals/vk.png);
+  width: 33px;
+  height: 33px;
 }
 
 .icon.icon-modals-info{
@@ -263,10 +284,20 @@ button:active {
 
 .icon.icon-modals-marker{
   background-image: url(./assets/images/modals/marker.png);
+  width: 22px;
+  height: 22px;
 }
 
 .icon.icon-modals-phone{
   background-image: url(./assets/images/modals/phone.png);
+  width: 22px;
+  height: 22px;
+}
+
+.icon.icon-modals-email{
+  /*background-image: url(./assets/images/modals/email.png);*/
+  width: 22px;
+  height: 22px;
 }
 
 .icon.icon-modals-close{
@@ -308,6 +339,104 @@ button:active {
 .footer-slider-content .slick-next:before {
   content: url(./assets/images/withUs/right.png);
 }
+
+.nsm-dialog.nsm-dialog-open {
+  max-width: 700px;
+  position: fixed;
+  padding: 0;
+  border-radius: 7px;
+  background-color: transparent;
+}
+
+.nsm-dialog-btn-close {
+  background: url(./assets/images/modals/close.png) no-repeat;
+  top: 25px;
+  right: 25px;
+  width: 22px;
+  height: 22px;
+}
+
+.nsm-dialog-btn-close img {
+  display: none;
+}
+
+.modal-logo {
+  width: 311px;
+  height: 155px;
+  margin: 0 auto;
+}
+
+.modal-header {
+  padding: 50px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal-title {
+  font-size: 25px;
+  margin: 15px 0;
+}
+.modal-content {
+  background-color: white;
+  overflow: hidden;
+  padding: 60px 70px;
+}
+
+.modal-info .modal-header {
+  background-color: #F5F5F5;
+  color: #2B468B;
+}
+
+.modal-info .modal-logo {
+  background: url(./assets/images/modals/information.png) no-repeat;
+}
+
+.modal-investors .modal-header {
+  background-color: #F5F5F5;
+  color: #2B468B;
+}
+
+.modal-investors .modal-logo {
+  background: url(./assets/images/modals/investors.png) no-repeat;
+}
+
+.modal-contacts .modal-header {
+  background: url(./assets/images/modals/map-background.jpg) no-repeat;
+  color: #2B468B;
+}
+
+.modal-contacts .modal-logo {
+  background: url(./assets/images/modals/contacts.png) no-repeat;
+}
+
+.modal-contacts .nsm-dialog.nsm-dialog-open {
+  max-width: 615px;
+}
+
+.modal-join .nsm-dialog.nsm-dialog-open,
+.modal-answer .nsm-dialog.nsm-dialog-open,
+.modal-investors .nsm-dialog.nsm-dialog-open {
+  max-width: 640px;
+}
+
+.modal-join .modal-header {
+  background-color: #2B468B;
+  color: white;
+}
+
+.modal-join .modal-logo {
+  background: url(./assets/images/modals/summary.png) no-repeat;
+}
+
+.modal-answer .modal-header {
+  background-color: #2B468B;
+  color: white;
+}
+
+.modal-answer .modal-logo {
+  background: url(./assets/images/modals/useful.png) no-repeat;
+}
+
 
 .content {
   width: 1180px;

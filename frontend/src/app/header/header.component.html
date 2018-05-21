@@ -13,9 +13,77 @@
       </p></a>
     </div>
     <div class="header-right">
-      <span class="header-info">Информация</span>
-      <span class="header-info">Инвесторы</span>
-      <span class="header-info">Контакты</span>
+      <span
+        (click)="dialog.getModal('modalInfo').open()"
+        class="header-info"
+      >Информация</span>
+      <span
+        (click)="dialog.getModal('modalInvestors').open()"
+        class="header-info"
+      >Инвесторы</span>
+      <span
+        (click)="dialog.getModal('modalContacts').open()"
+        class="header-info"
+      >Контакты</span>
     </div>
   </div>
 </header>
+
+<ngx-smart-modal #modalInfo identifier="modalInfo" class="modal-info">
+  <div class="modal-header">
+    <div class="modal-logo"></div>
+    <h3 class="modal-title">Информация</h3>
+  </div>
+  <div class="modal-content">
+    <div class="modal-content-left">
+      <span><p><b>800</b></p>проектов</span>
+      <span><p><b>6</b> лет</p>на рынке</span>
+      <span><p><b>370</b></p>исполнителей</span>
+    </div><div class="modal-content-right">
+      <p>faadsfadsfwepjfiejsfo ihjfou ihaduiog huowahg uioheawds uighewa K lehguil ugfieh uiofgewui gfeuiwf eouhgwou whg uoehwu ish ugiehg uwehug hweg hweuhg weuhg ewuo gueh guoewh guowehg 7ew guheagouewaugheWUO IHGUIEQ</p>
+      <p>asdfasd afsadio hfdaoh ugihdug hdo ghjas gyswahuy gworadfij oihadu iohf iouadh giouhasug hsauhg hsawdgoi aihg orh gou rweh uor</p>
+      <p>asdfioads jfiowehg jweig jreg reiug weg gi jweaipg ujewpgoi jewptu49 utg 4w9ejgweai gewao8 g8whg</p>
+    </div>
+  </div>
+</ngx-smart-modal>
+
+<ngx-smart-modal #modalInvestors identifier="modalInvestors" class="modal-investors">
+  <div class="modal-header">
+    <div class="modal-logo"></div>
+    <h3 class="modal-title">Инвесторы</h3>
+  </div>
+  <div class="modal-content">
+    <h3>Инвесторы</h3>
+    <div>
+      <p>Группка компаний ENERGIZES</p>
+      <div class="icon icon-energizes"></div>
+      <div class="icon icon-me"></div>
+    </div>
+    <hr size="1" color="#F5F5F5" noshade>
+    <h3>Партнеры</h3>
+    <div>
+      <p>Cтудия танцев JeeFox</p>
+      <div class="icon icon-fox"></div>
+    </div>
+  </div>
+</ngx-smart-modal>
+
+<ngx-smart-modal #modalContacts identifier="modalContacts" class="modal-contacts">
+  <div class="modal-header">
+    <div class="modal-logo"></div>
+    <h3 class="modal-title">Контакты</h3>
+  </div>
+  <div class="modal-content">
+    <div class="icon icon-modals-marker"></div><p><span class="ymaps-geolink">109629 г. Москва ул. 8-я Текстильщиков д. 11 стр. 2</span></p>
+    <a href="tel:+74993933371"><div class="icon icon-modals-phone"></div><p>+7 (499) 393 33 71</p></a>
+    <a href="mailto:contact@energizes.ru"><div class="icon icon-modals-marker"></div><p>contact@energizes.ru</p></a>
+
+    <div class="modal-contacts-footer">
+      <div class="icon icon-modals-vk"></div>
+      <div class="icon icon-modals-fb"></div>
+      <div class="icon icon-modals-insta"></div>
+
+      <a href="tel:+74993933371"><p><span class="icon icon-modals-phone"></span>Связаться с нами</p></a>
+    </div>
+  </div>
+</ngx-smart-modal>

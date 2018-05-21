@@ -70,4 +70,117 @@
   text-align: left;
 
   margin-left: 20px;
+
+  cursor: pointer;
+}
+
+.modal-investors .modal-content h3 {
+  color: #FF7800;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.modal-investors .modal-content > div {
+  line-height: 80px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.modal-investors .modal-content hr {
+  border: 1px #F5F5F5 solid;
+  margin-bottom: 30px;
+}
+
+.modal-investors .modal-content p {
+  float: left;
+}
+
+.modal-investors .modal-content .icon {
+  float: right;
+  height: 80px;
+  margin-left: 25px;
+}
+
+.modal-investors .modal-content .icon-energizes {
+  height: 70px;
+}
+
+.modal-investors .modal-content .icon-fox {
+  margin-right: 30px;
+}
+
+.modal-info .modal-content-left {
+  float: left;
+  width: 140px;
+  color: #FF7800;
+  font-size: 15px;
+  border-right: 1px #EBEBEB solid;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.modal-info .modal-content-left span {
+  line-height: 32px;
+  display: block;
+}
+
+.modal-info .modal-content-left span:nth-child(2n) {
+  margin: 30px 0;
+}
+
+.modal-info .modal-content-left p {
+  font-size: 25px;
+}
+
+.modal-info .modal-content-left b {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+
+.modal-info .modal-content-right {
+  float: right;
+  width: calc(100% - 140px);
+  font-size: 15px;
+  padding-left: 30px;
+}
+
+.modal-info .modal-content-right p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.modal-contacts .modal-content p {
+  margin-bottom: 15px;
+}
+
+.modal-contacts .modal-content .icon {
+  margin-right: 25px;
+  float: left;
+}
+
+.modal-contacts .modal-contacts-footer {
+  width: 90%;
+  margin: 70px auto 0 auto;
+  line-height: 33px;
+}
+
+.modal-contacts .modal-contacts-footer p {
+  margin-left: 30px;
+  margin-bottom: 0;
+  float: right;
+  color: #2B468B;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.modal-contacts .modal-contacts-footer .icon {
+  float: left;
+  height: 33px;
+}
+
+.ymaps-2-1-64-geolink-popup {
+  top: -50px !important;
+
 }

@@ -2,12 +2,12 @@ import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/co
 declare var $: any;
 
 @Component({
-  selector: 'bc-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
+  selector: 'bc-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ProjectsComponent implements AfterViewInit {
+export class MainComponent implements AfterViewInit {
 
   public selectSection
   public selectTheme

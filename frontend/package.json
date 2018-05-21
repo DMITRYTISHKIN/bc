@@ -27,10 +27,11 @@
     "jquery": "^3.3.1",
     "masonry-layout": "^4.2.1",
     "ngx-popper": "^2.7.1",
+    "ngx-smart-modal": "^6.0.0",
     "rxjs": "^6.1.0",
+    "rxjs-compat": "^6.0.0-rc.0",
     "slick-carousel": "^1.8.1",
-    "zone.js": "^0.8.19",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.6.3",
