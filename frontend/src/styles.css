@@ -260,22 +260,33 @@ button:active {
 }
 
 /* Modals icons */
-.icon.icon-modals-insta{
+.icon.icon-modals-insta {
   background-image: url(./assets/images/modals/insta.png);
   width: 33px;
   height: 33px;
+  background-size: cover;
+  background-position: 0 0;
 }
 
-.icon.icon-modals-fb{
+.icon.icon-modals-fb {
   background-image: url(./assets/images/modals/fb.png);
   width: 33px;
   height: 33px;
+  background-size: cover;
+  background-position: 0 0;
 }
 
-.icon.icon-modals-vk{
+.icon.icon-modals-vk {
   background-image: url(./assets/images/modals/vk.png);
   width: 33px;
   height: 33px;
+  background-size: cover;
+  background-position: 0 0;
+}
+.icon.icon-modals-insta:hover,
+.icon.icon-modals-fb:hover,
+.icon.icon-modals-vk:hover {
+  background-position: 0 -33px;
 }
 
 .icon.icon-modals-info{
@@ -288,17 +299,29 @@ button:active {
   height: 22px;
 }
 
-.icon.icon-modals-phone{
+.icon.icon-modals-phone {
   background-image: url(./assets/images/modals/phone.png);
   width: 22px;
   height: 22px;
 }
 
-.icon.icon-modals-email{
-  /*background-image: url(./assets/images/modals/email.png);*/
+.icon.icon-modals-email {
+  background-image: url(./assets/images/modals/email.png);
   width: 22px;
   height: 22px;
 }
+
+.icon.icon-modals-info {
+  background-image: url(./assets/images/modals/connect.png);
+  width: 22px;
+  height: 22px;
+  background-size: cover;
+  background-position: 0 0;
+}
+.icon.icon-modals-info:hover {
+  background-position: 0 -22px;
+}
+
 
 .icon.icon-modals-close{
   background-image: url(./assets/images/modals/close.png);

@@ -125,7 +125,7 @@
 }
 
 .modal-info .modal-content-left span:nth-child(2n) {
-  margin: 30px 0;
+  margin: 35px 0;
 }
 
 .modal-info .modal-content-left p {
@@ -146,8 +146,9 @@
 }
 
 .modal-info .modal-content-right p {
-  margin-bottom: 10px;
   text-align: justify;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .modal-contacts .modal-content p {
@@ -178,6 +179,21 @@
 .modal-contacts .modal-contacts-footer .icon {
   float: left;
   height: 33px;
+  cursor: pointer;
+}
+
+.modal-contacts .modal-contacts-footer .icon-modals-info {
+  height: 22px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.model-contact-connect:hover p {
+  color: #FF7800;
+}
+
+.model-contact-connect:hover span {
+  background-position: 0 -22px;
 }
 
 .ymaps-2-1-64-geolink-popup {
