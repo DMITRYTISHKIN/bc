@@ -40,11 +40,6 @@
   color: #FF7800;
 }
 
-.menu-item:focus {
-  color: #FF7800;
-  outline: none;
-}
-
 .menu-popper {
   border: none !important;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
@@ -57,10 +52,18 @@
   border-radius: 0 !important;
 }
 
+.menu-popper-all-arrow {
+  border-width: 0 10px 10px 10px !important;
+  border-color: transparent transparent #F7F7FF transparent !important;
+  margin: -5px 0 0 0 !important;
+  margin-left: 10px !important;
+}
+
 .menu-popper-arrow {
   border-width: 0 10px 10px 10px !important;
   border-color: transparent transparent #FFFFFF transparent !important;
   margin: -5px 0 0 0 !important;
+  margin-left: 10px !important;
 }
 
 #menu-popper-container {
@@ -132,6 +135,9 @@
 }
 
 .icon-search {
+  position: absolute;
+  right: 10px;
+  top: 17px;
   width: 25px;
   height: 25px;
   float: right;
@@ -146,15 +152,16 @@
 }
 
 .menu-search {
+  position: relative;
   float: right;
   width: 25%;
-  padding: 17px 0;
+  padding: 10px 0;
 }
 
 .menu-search-input {
-  width: calc(100% - 35px);
+  width: 100%;
   float: left;
-  height: 25px;
+  height: 40px;
   border: none;
   outline: none;
   font-size: 17px;
@@ -162,9 +169,14 @@
   background-color: transparent;
   transition: 0.3s;
   opacity: 0;
+  padding-right: 45px;
 }
 
-.menu-search-input:focus {
+.menu-search:hover .menu-search-input {
   background-color: white;
   opacity: 1;
+}
+
+.menu-search:hover .icon-search{
+  background-position: 0 -25px;
 }

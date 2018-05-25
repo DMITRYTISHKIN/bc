@@ -1,11 +1,12 @@
 <button
   class="menu-item"
   [popper]="all"
-  popperTrigger="click"
+  [popperHideOnClickOutside]="false"
+  popperTrigger="hover"
   popperPlacement="top"
   popperBoundaries="#menu-popper-container"
   popperApplyClass="menu-popper"
-  popperApplyArrowClass="menu-popper-arrow"
+  popperApplyArrowClass="menu-popper-all-arrow"
 >Все продукты</button>
 <popper-content #all>
   <div class="menu-popper-container">

@@ -1,7 +1,8 @@
 <button
   class="menu-item"
   [popper]="production"
-  popperTrigger="click"
+  [popperHideOnClickOutside]="false"
+  popperTrigger="hover"
   popperPlacement="top"
   popperBoundaries="#menu-popper-container"
   popperApplyClass="menu-popper"

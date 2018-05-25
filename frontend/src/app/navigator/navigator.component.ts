@@ -45,6 +45,7 @@ export class NavigatorComponent implements OnInit {
         });
 
       this.activeRoute = activeRoute;
+      window.scrollTo(0, 0);
     })
   }
 

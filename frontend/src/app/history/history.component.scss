@@ -1,0 +1,134 @@
+.history-header {
+  background-color: #EBEBEB;
+  height: 237px;
+  background-image: url(../../assets/images/history/history-header-2.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.history-header-content {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.history-header h1 {
+  text-transform: uppercase;
+  color: #FF7800;
+  line-height: 237px;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.history-graph {
+  position: absolute;
+  width: 80%;
+  line-height: 80px;
+  background: linear-gradient(90deg, #FFFFFF, #EEEEFC);
+  left: calc(570px - 912px / 2);
+  bottom: -40px;
+  text-align: right;
+}
+
+.history-graph:after {
+  content: '';
+  background: url(../../assets/images/history/history-header-1.jpg) no-repeat;
+  height: 196px;
+  width: 475px;
+  top: -196px;
+  position: absolute;
+  right: 0;
+}
+
+.history-graph div {
+  display: inline-block;
+
+  color: #999999;
+  cursor: default;
+}
+
+.history-graph div span {
+  margin: 0 15px;
+  font-size: 20px;
+}
+
+.history-graph div:nth-child(1) {
+  color: #FF7800;
+}
+
+.history-graph div:after {
+  content: '';
+  display: inline-block;
+  width: 130px;
+  height: 1px;
+  background-color: #CFCFCF;
+  margin-bottom: 5px;
+}
+
+.history-content {
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 100px 0;
+  cursor: default;
+}
+
+.history-content span:hover .histroy-text {
+  color: #FFFFFF;
+  background-color: #2B468B;
+}
+
+.histroy-image {
+  width: 60%;
+  float: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.histroy-text {
+  font-size: 18px;
+  padding: 70px 40px;
+  background-color: #EBEBEB;
+  width: 40%;
+  color: #2B468B;
+  text-align: justify;
+  float: left;
+  transition: 0.2s ease-out;
+}
+
+.histroy-2015-image {
+  background-image: url(../../assets/images/history/2015.jpg);
+  height: 333px;
+}
+
+.histroy-2015 {
+  height: 333px;
+}
+
+.histroy-2016-image {
+  background-image: url(../../assets/images/history/2016.jpg);
+  height: 378px;
+}
+
+.histroy-2016 {
+  height: 378px;
+}
+
+.histroy-2017-image {
+  background-image: url(../../assets/images/history/2017.jpg);
+  height: 378px;
+}
+
+.histroy-2017 {
+  height: 378px;
+}
+
+.histroy-2018-image {
+  background-image: url(../../assets/images/history/2018.jpg);
+  height: 228px;
+}
+
+.histroy-2018 {
+  height: 228px;
+}

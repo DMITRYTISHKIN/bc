@@ -1,5 +1,18 @@
+.navigator {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navigator-content {
+  position: absolute;
+  padding: 15px 0;
+  z-index: 1;
+}
+
 .navigator-link {
   cursor: pointer;
+  color: #777777;
 
   &:hover {
     color: #FF7800;

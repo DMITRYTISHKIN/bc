@@ -1,11 +1,13 @@
-<div *ngIf="activeRoute.length">
-  <span
-    class="navigator-link"
-    [routerLink]="['/']"
-  >Главная</span>
-  <span
-    class="navigator-link"
-    *ngFor="let item of activeRoute"
-    [routerLink]="[item.ROUTE]"
-  > → {{ item.NAME }}</span>
+<div class="navigator" *ngIf="activeRoute.length">
+  <div class="navigator-content">
+    <span
+      class="navigator-link"
+      [routerLink]="['/']"
+    >Главная</span>
+    <span
+      class="navigator-link"
+      *ngFor="let item of activeRoute"
+      [routerLink]="[item.ROUTE]"
+    > → {{ item.NAME }}</span>
+  </div>
 </div>
