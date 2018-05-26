@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { of, BehaviorSubject, Observable } from 'rxjs';
-import { map, filter } from 'rxjs/operators';
+import { map, filter, delay } from 'rxjs/operators';
 import { HttpResponse } from '@angular/common/http';
 
 import { News, ResponseData } from './news.model';
@@ -256,7 +256,8 @@ export class NewsService {
   private _data$: BehaviorSubject<ResponseData> = new BehaviorSubject<ResponseData>(null);
   public data$: Observable<ResponseData> = this._data$
     .asObservable().pipe(
-      filter(item => item !== null)
+      filter(item => item !== null),
+      delay(3000)
     );
 
   public fetchData(page: number = 1, per: number = 8) {

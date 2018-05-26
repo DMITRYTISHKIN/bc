@@ -1,31 +1,37 @@
 <div class="news">
   <div class="news-content">
+      <h2>Новости</h2>
       <div class="news-container">
-        <div
-          class="news-item"
-          *ngFor="let item of data "
-        >
-          <div class="news-item-photo">
-            <img src="{{ item.PHOTO }}"  />
-          </div>
-          <div class="news-item-date">
-            <div>
-              <span class="news-item-day">{{ item.DATE | amDateFormat:'D' }}</span>
-              <span class="news-item-mounth">{{ item.DATE | amDateFormat:'MMM' }}</span>
+        <div class="news-items {{ isLoading ? 'loading' : '' }}">
+          <div
+            class="news-item"
+            *ngFor="let item of data "
+          >
+            <div class="news-item-photo">
+              <img src="{{ item.PHOTO }}"  />
             </div>
-            <span class="news-item-year">{{ item.DATE | amDateFormat:'YYYY' }}</span>
+            <div class="news-item-date">
+              <div>
+                <span class="news-item-day">{{ item.DATE | amDateFormat:'D' }}</span>
+                <span class="news-item-mounth">{{ item.DATE | amDateFormat:'MMM' }}</span>
+              </div>
+              <span class="news-item-year">{{ item.DATE | amDateFormat:'YYYY' }}</span>
+            </div>
+            <div class="news-item-info">
+              <h3>{{ item.NAME }}</h3>
+              <p>{{ item.NOTE }}</p>
+            </div>
           </div>
-          <div class="news-item-info">
-            <h3>{{ item.NAME }}</h3>
-            <p>{{ item.NOTE }}</p>
+          <div class="news-paginator">
+            <shared-paginator
+              [perPage]="8"
+              [currentPage]="currentPage"
+              [totalCount]="totalCount"
+              (changePage)="goTo($event)"
+            ></shared-paginator>
           </div>
         </div>
+        <div class="new-spinner {{ isLoading ? 'loader' : '' }}"></div>
       </div>
-      <shared-paginator
-        [perPage]="8"
-        [currentPage]="currentPage"
-        [totalCount]="totalCount"
-        (changePage)="goTo($event)"
-      ></shared-paginator>
   </div>
 </div>

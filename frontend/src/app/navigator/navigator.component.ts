@@ -25,7 +25,6 @@ export class NavigatorComponent implements OnInit {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       let activeRoute = [];
-
       event.url
         .split('/')
         .filter((item: string) => item.length)
@@ -51,7 +50,15 @@ export class NavigatorComponent implements OnInit {
 
 
   public getName(route: string): string {
-    switch (route) {
+    let key: any = route.match(/(.*);/);
+
+    if (key) {
+      key = key[1]
+    } else {
+      key = route
+    }
+
+    switch (key) {
       case 'history':
         return 'История бренда'
       case 'mission':

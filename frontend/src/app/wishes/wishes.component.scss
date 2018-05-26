@@ -1,0 +1,66 @@
+.wishes {
+  background-image: url(../../assets/images/wishes/back.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  background-color: #F5F5F5;
+}
+
+
+.wishes-content {
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wishes-content-left {
+  width: 60%;
+  overflow: hidden;
+  float: left;
+  padding: 130px 0 330px 0;
+
+  & h2 {
+    color: #2B468B;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+  }
+
+  & p {
+    line-height: 20px;
+  }
+}
+
+.wishes-content-right {
+  float: right;
+  width: 40%;
+  background-color: white;
+  padding: 70px 0 70px 90px;
+
+  & h2 {
+    color: #999999;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+  }
+}
+
+.wishes-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  & h4 {
+    color: #2B468B;
+    margin: 7px 0;
+  }
+
+  & h5 {
+    color: #999999;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  & p {
+    margin-top: 10px;
+  }
+}

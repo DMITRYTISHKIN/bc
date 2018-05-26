@@ -2,6 +2,9 @@ import { Component, Input, Output, OnInit, EventEmitter, ChangeDetectionStrategy
   ChangeDetectorRef
 } from '@angular/core';
 
+import { BehaviorSubject } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 @Component({
   selector: 'shared-paginator',
   templateUrl: './paginator.component.html',
@@ -14,7 +17,7 @@ export class PaginatorComponent implements OnInit {
 
   @Input() perPage: number;
   @Input() currentPage: number;
-  @Input() totalCount: number;
+  @Input() totalCount: BehaviorSubject<number>;
   @Input() pers: number[] = [9, 18, 30];
   @Input() aroundCount: number = 2;
 
@@ -134,7 +137,9 @@ export class PaginatorComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._initVariables();
+    this.totalCount.pipe(
+      filter(item => item !== null)
+    ).subscribe(this._initVariables.bind(this));
   }
 
   /**
@@ -145,7 +150,6 @@ export class PaginatorComponent implements OnInit {
    */
   public onChangePer(per: string): void {
     this.perPage = +per;
-    this.changeDetection.markForCheck();
     this._initVariables();
   }
 
@@ -180,7 +184,8 @@ export class PaginatorComponent implements OnInit {
    * @memberof PaginatorComponent
    */
   private _initVariables(): void {
-    this.countPages = Math.ceil(this.totalCount / this.perPage);
+    debugger
+    this.countPages = Math.ceil(this.totalCount.getValue() / this.perPage);
     this.pages = Array(this.countPages).fill(0).map((x, i) => i + 1);
     this.maxButons = this.aroundCount * 4 + 1;
     this.middleValue = Math.ceil(this.maxButons / 2);
@@ -188,5 +193,7 @@ export class PaginatorComponent implements OnInit {
     if (this.currentPage > this.countPages) {
       this.currentPage = this.countPages;
     }
+
+    this.changeDetection.markForCheck();
   }
 }

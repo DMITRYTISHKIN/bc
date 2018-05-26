@@ -1,4 +1,4 @@
-<div class="paginator-container">
+<div *ngIf="countPages > 1" class="paginator-container">
   <button
     (click)="onClick($event, currentPage - 1)"
     [disabled]="currentPage === 1"
@@ -50,7 +50,7 @@
     [disabled]="currentPage === countPages"
     class="paginator-button"
   >Next</button>
-  <select (change)="onChangePer($event.target.value)">
+  <select *ngIf="false" (change)="onChangePer($event.target.value)">
     <option
       *ngFor="let per of pers"
       [selected]="per === perPage"
