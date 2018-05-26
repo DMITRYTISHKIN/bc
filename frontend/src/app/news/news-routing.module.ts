@@ -5,6 +5,7 @@ import { NewsComponent } from './news.component';
 
 const routes: Routes = [
   { path: 'news', component: NewsComponent },
+  { path: 'news/:page', component: NewsComponent },
 ];
 
 export const NewsRoutingModule: ModuleWithProviders = RouterModule.forChild(routes);

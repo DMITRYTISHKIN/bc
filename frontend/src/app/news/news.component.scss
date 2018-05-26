@@ -1,0 +1,144 @@
+.news {
+
+}
+
+.news-container {
+  overflow: hidden;
+}
+
+.news-content {
+  width: 1160px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 50px 0;
+
+  & h2 {
+    color: #2B468B;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 20px 18px;
+  }
+}
+
+.news-item {
+  float: left;
+  width: calc(100% / 3 - 20px);
+  margin: 10px;
+  height: 550px;
+  background-color: #F5F5F5;
+  overflow: hidden;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+
+}
+
+.news-item:nth-child(1),
+.news-item:nth-child(2) {
+  width: calc(50% - 20px);
+
+  & .news-item-date {
+    padding: 30px 0 20px 40px;
+  }
+
+  & .news-item-info {
+    width: calc(100% - 160px);
+    margin: 25px 40px 20px 20px;
+  }
+}
+
+.news-item-photo {
+  height: 360px;
+  overflow: hidden;
+}
+
+.news-item-photo img {
+  min-width: 100%;
+  min-height: 100%;
+  transition: 0.3s ease-out;
+}
+
+.news-item-date {
+  float: left;
+  width: 100px;
+  padding: 30px 0 20px 20px;
+
+  & div {
+    text-align: center;
+    width: 42px;
+    background-color: #999999;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 400;
+    margin-bottom: 4px;
+
+
+    & .news-item-day {
+      font-size: 20px;
+      display: block;
+      line-height: 20px;
+    }
+
+    & .news-item-mounth {
+      font-size: 14px;
+      display: block;
+      text-transform: lowercase;
+    }
+  }
+
+  & .news-item-year {
+    display: inline-block;
+    text-align: center;
+    width: 42px;
+    font-size: 14px;
+    color: #999999
+  }
+}
+
+.news-item-info {
+  height: 140px;
+  float: right;
+  width: calc(100% - 120px);
+  margin: 25px 20px 20px 0;
+  overflow: hidden;
+
+  & h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #2B468B;
+  }
+
+  & p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: justify;
+    overflow: hidden;
+  }
+}
+
+.news-item:hover {
+  background-color: #2B468B;
+
+  & .news-item-date {
+    & .news-item-year {
+      color: #FFFFFF;
+    }
+
+    & div {
+      color: #2B468B;
+      background-color: #FFFFFF;
+    }
+  }
+
+  & .news-item-info h3,
+  & .news-item-info p {
+    color: #FFFFFF;
+  }
+
+  & .news-item-photo img {
+    min-width: 105%;
+    min-height: 105%;
+  }
+}
