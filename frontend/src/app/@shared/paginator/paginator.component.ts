@@ -184,7 +184,6 @@ export class PaginatorComponent implements OnInit {
    * @memberof PaginatorComponent
    */
   private _initVariables(): void {
-    debugger
     this.countPages = Math.ceil(this.totalCount.getValue() / this.perPage);
     this.pages = Array(this.countPages).fill(0).map((x, i) => i + 1);
     this.maxButons = this.aroundCount * 4 + 1;

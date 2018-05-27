@@ -119,7 +119,6 @@ export class TeamComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    debugger
   }
 
 }
