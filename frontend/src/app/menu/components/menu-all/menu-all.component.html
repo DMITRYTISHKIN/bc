@@ -1,4 +1,5 @@
 <button
+  *ngIf="data"
   class="menu-item"
   [popper]="all"
   [popperHideOnClickOutside]="false"
@@ -10,24 +11,16 @@
 >Все продукты</button>
 <popper-content #all>
   <div class="menu-popper-container">
-    <div class="menu-popper-section menu-popper-production">
-      <h5>Производство</h5>
+
+    <div
+      *ngFor="let direction of data"
+      class="menu-popper-section menu-popper-production"
+    >
+      <h5>{{ direction.NAME }}</h5>
       <ul>
         <li
-          *ngFor="let item of data.production"
-        >{{ item }}</li>
-      </ul>
-    </div
-    ><div class="menu-popper-section menu-popper-promotion">
-      <h5>Продвижение</h5>
-      <ul>
-        <li *ngFor="let item of data.promotion">{{ item }}</li>
-      </ul>
-    </div
-    ><div class="menu-popper-section menu-popper-packages">
-      <h5>Комплексные пакеты услуг</h5>
-      <ul>
-        <li *ngFor="let item of data.packages">{{ item }}</li>
+          *ngFor="let item of direction.ITEMS"
+        >{{ item.NAME }}</li>
       </ul>
     </div>
   </div>

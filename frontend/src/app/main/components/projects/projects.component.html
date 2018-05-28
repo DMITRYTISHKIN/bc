@@ -1,0 +1,52 @@
+<div class="projects-content">
+  <h2>Примеры работ</h2>
+  <div class="projects-container {{ isLoading ? 'loading' : '' }}">
+    <div class="projects-toolbar">
+      <ng-select
+        class="projects-select-areas"
+        [items]="menuService.sections$ | async"
+        placeholder="Все творческие области"
+        bindLabel="NAME"
+        bindValue="_id"
+        [(ngModel)]="selectSection"
+      ></ng-select>
+      <ng-select
+        class="projects-select-themes"
+        [items]="themes"
+        placeholder="Все специализации"
+        bindLabel="NAME"
+        bindValue="ID"
+        [(ngModel)]="selectTheme"
+      ></ng-select>
+    </div>
+    <div class="projects-layout">
+      <div clas="projects-sizer"></div>
+      <div
+        class="projects-item"
+        *ngFor="let item of data"
+        [routerLink]="['/project/1']"
+      >
+        <img src="{{ item.PREVIEW_IMAGE }}" />
+        <div class="projects-description">
+          <div>
+            <p>{{ item.SECTION }}</p>
+            <h3>{{ item.NAME }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-paginator">
+      <shared-paginator
+        [perPage]="12"
+        [currentPage]="currentPage"
+        [totalCount]="totalCount"
+        (changePage)="goTo($event)"
+      ></shared-paginator>
+    </div>
+    <div class="projects-search">
+      <input type="text" placeholder="Поиск по сайту" />
+      <div class="icon icon-searchful"></div>
+    </div>
+    <div class="main-spinner {{ isLoading ? 'loader' : '' }}"></div>
+  </div>
+</div>

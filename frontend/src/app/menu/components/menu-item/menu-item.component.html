@@ -7,6 +7,7 @@
   popperBoundaries="#menu-popper-container"
   popperApplyClass="menu-popper"
   popperApplyArrowClass="menu-popper-arrow"
+  (popperOnShown)="onShown($event)"
 ><ng-content></ng-content></button>
 <popper-content #production>
   <div class="menu-popper-container">
@@ -17,20 +18,21 @@
     >
       <div
         class="menu-popper-group"
-        *ngFor="let item of data"
+        *ngFor="let group of data.GROUPS"
       >
-        <h5>{{ item.group }}</h5>
+        <h5>{{ group.NAME }}</h5>
         <ul>
           <li
-            *ngFor="let elem of item.items"
-            (mouseenter)="onHoverItem(elem)"
-          >{{ elem.NAME }}</li>
+            *ngFor="let item of group.ITEMS"
+            (mouseenter)="onHoverItem(item)"
+          >{{ item.DESCRIPTION || item.NAME }}</li>
         </ul>
       </div>
     </div>
     <div
       [style.width.%]="infoSize"
       class="menu-popper-section menu-popper-info"
+      *ngIf="info"
     >
       <div class="icon icon-info-menu"></div>
       <h5>{{ info.NAME }}</h5>

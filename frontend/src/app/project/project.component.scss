@@ -1,0 +1,153 @@
+.project-header {
+  background-color: #FFFFFF;
+  box-shadow: 0px 10px 15px #F5F5F5;
+  overflow: hidden;
+  padding: 70px 0 40px 0;
+}
+
+.project-header-content {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.project-header-left {
+  float: left;
+  width: 40%;
+}
+
+.project-header-right {
+  float: right;
+  width: 60%;
+}
+
+.project-name {
+  color: #2B468B;
+  font-weight: 400;
+  padding-bottom: 25px;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.project-description {
+  padding-bottom: 12px;
+}
+
+.project-article {
+  color: #999999;
+}
+
+.project-note {
+  color: #999999;
+  text-align: justify;
+  padding-top: 20px;
+  line-height: 18px;
+}
+
+.project-content {
+  padding: 50px 0 0px 0;
+  width: 1140px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.project-content img {
+  float: left;
+}
+
+.project-footer {
+  width: calc(50% + 570px);
+  background-color: #698CE6;
+  overflow: hidden;
+}
+
+.project-footer-content {
+  width: 1140px;
+  float: right;
+}
+
+.project-same {
+  position: relative;
+  width: calc(1140px / 4);
+  height: 285px;
+  float: left;
+  color: #FFFFFF;
+
+  & h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 100px;
+  }
+
+  & p {
+    line-height: 20px;
+  }
+
+  & button {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background-image: url(../../assets/images/project/arrowSame.png);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 37px;
+    height: 23px;
+  }
+}
+
+.project-same-item {
+  width: calc(1140px / 4);
+  height: 285px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+
+  & img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  & .project-same-description {
+    position: absolute;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-out;
+    opacity: 0;
+    color: #2B468B;
+  }
+
+  & .project-same-description:hover {
+    background-color: rgba(245, 245, 245, 0.8);
+    opacity: 1;
+  }
+
+  & .project-same-description div {
+    margin: auto;
+    text-align: center;
+  }
+
+  & .project-same-description p {
+    color: #777777;
+    font-size: 15px;
+  }
+
+  & .project-same-description h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.project-top {
+  background-image: url(../../assets/images/project/toTop.png);
+  background-repeat: no-repeat;
+  background-color: #F7F7F7;
+  background-position: center;
+  box-shadow: 0 0 5px #AAAAAA;
+  border-radius: 50%;
+  padding: 22px;
+  margin: 20px 2px 20px 0;
+  float: right;
+}

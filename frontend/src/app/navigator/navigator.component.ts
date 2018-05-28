@@ -16,6 +16,8 @@ export class NavigatorComponent implements OnInit {
 
   public activeRoute: route[] = [];
 
+  public error = false;
+
   constructor(
     private _router: Router
   ) { }
@@ -50,6 +52,7 @@ export class NavigatorComponent implements OnInit {
 
 
   public getName(route: string): string {
+    this.error = false;
     let key: any = route.match(/(.*);/);
 
     if (key) {
@@ -69,6 +72,10 @@ export class NavigatorComponent implements OnInit {
         return 'Команда'
       case 'wishes':
         return 'Пожелания и благодарности'
+      case 'project':
+        return 'Проект'
+      default:
+        this.error = true;
     }
   }
 }

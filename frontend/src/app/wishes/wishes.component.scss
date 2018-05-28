@@ -1,7 +1,7 @@
 .wishes {
   background-image: url(../../assets/images/wishes/back.jpg);
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: calc(100% / 2 - 415px) center;
   background-size: contain;
   background-color: #FFFFFF;
 }
@@ -28,17 +28,6 @@
 
   & p {
     line-height: 20px;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    right: 25px;
-    bottom: -240px;
-    background-image: url(../../assets/images/wishes/mark.png);
-    background-repeat: no-repeat;
-    width: 325px;
-    height: 294px;
   }
 }
 

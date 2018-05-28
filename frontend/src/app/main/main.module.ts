@@ -8,6 +8,9 @@ import { FooterOfferComponent } from './components/footer-offer/footer-offer.com
 import { MainRoutingModule } from './main-routing.module';
 import { FooterSliderComponent } from './components/footer-slider/footer-slider.component';
 import { SuggestComponent } from './components/suggest';
+import { PaginatorModule } from '@shared/paginator';
+import { MainService } from './main.service';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   imports: [
@@ -15,7 +18,8 @@ import { SuggestComponent } from './components/suggest';
     NgSelectModule,
     FormsModule,
     MainRoutingModule,
-    NgxSmartModalModule
+    NgxSmartModalModule,
+    PaginatorModule
   ],
   exports: [
     MainComponent
@@ -24,7 +28,10 @@ import { SuggestComponent } from './components/suggest';
     MainComponent,
     FooterOfferComponent,
     FooterSliderComponent,
-    SuggestComponent
+    SuggestComponent,
+    ProjectsComponent
+  ], providers: [
+    MainService
   ]
 })
 export class MainModule { }

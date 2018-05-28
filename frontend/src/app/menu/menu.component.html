@@ -1,10 +1,13 @@
 <div class="menu">
   <div class="menu-content">
-    <nav>
-      <bc-menu-all></bc-menu-all>
-      <bc-menu-item>Производство</bc-menu-item>
-      <bc-menu-item>Продвижение</bc-menu-item>
-      <bc-menu-item [menuSize]="35">Комплексные пакеты услуг</bc-menu-item>
+    <nav *ngIf="data">
+      <bc-menu-all [data]=dataAll></bc-menu-all>
+      <bc-menu-item
+        *ngFor="let item of data; let last = last"
+        [data]="item"
+        [menuSize]="last ? 35 : 60"
+      >{{ item.NAME }}</bc-menu-item>
+      <!-- <bc-menu-item [menuSize]="35">Комплексные пакеты услуг</bc-menu-item> -->
     </nav>
     <div class="menu-search">
       <input

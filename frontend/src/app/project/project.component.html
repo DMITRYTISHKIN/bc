@@ -1,0 +1,39 @@
+<div class="project">
+  <div class="project-header">
+    <div class="project-header-content">
+      <div class="project-header-left">
+        <h2 class="project-name">{{ data.NAME }}</h2>
+        <p class="project-description">{{ data.DESCRIPTION }}</p>
+        <p class="project-article">Артикул: {{ data.ARTICLE }}</p>
+      </div>
+      <div class="project-header-right">
+        <p class="project-note">{{ data.NOTE }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="project-content">
+    <img *ngFor="let image of data.IMAGES" src="{{ image }}" width="100%" />
+    <button class="project-top" (click)="onTop()"></button>
+  </div>
+  <div class="project-footer">
+    <div class="project-footer-content">
+      <div class="project-same">
+          <h3>Похожие работы</h3>
+          <p>Эти проекты могут вас заинтересовать</p>
+          <button></button>
+        </div>
+        <div
+          class="project-same-item"
+          *ngFor="let item of dataSame"
+        >
+          <img src="{{ item.PREVIEW_IMAGE }}"/>
+          <div class="project-same-description">
+            <div>
+              <p>{{ item.NAME }}</p>
+              <h3>{{ item.SECTION }}</h3>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

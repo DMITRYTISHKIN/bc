@@ -1,9 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
-type MenuItem = {
-  NAME: string,
-  NOTE: string
-}
+import { DirectionItem, MenuItem } from '../../menu.model'
 
 @Component({
   selector: 'bc-menu-item',
@@ -18,63 +14,7 @@ export class MenuItemComponent implements OnInit {
   infoSize: number = 40;
   columnCount: number = 2;
 
-  @Input() public data = [
-    {
-      group: 'asdasd',
-      items: [
-        {
-          NAME: 'dsadsad sadasd',
-          NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-        },
-        {
-          NAME: 'vcbvc nbcnc',
-          NOTE: `sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds
-            <div>
-              <div class="button-download">
-              <div class="icon icon-download"></div>Скачать предложение</div>
-            </div>
-          `
-        },
-        {
-          NAME: 'fgjgfhdhgdfsgdf ggg',
-          NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-        },
-        {
-          NAME: 'dsadsad sadasd',
-          NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-        }
-      ]
-    },
-    {
-      group: 'asdasd',
-      items: [
-        {
-          NAME: 'dsadsad sadasd',
-          NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-        },
-        {
-          NAME: 'vcbvc nbcnc',
-          NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-        },
-        {
-          NAME: 'fgjgfhdhgdfsgdf ggg',
-          NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-        },
-        {
-          NAME: 'dsadsad sadasd',
-          NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-        },
-        {
-          NAME: 'vcbvc nbcnc',
-          NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-        },
-        {
-          NAME: 'fgjgfhdhgdfsgdf ggg',
-          NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-        }
-      ]
-    }
-  ]
+  @Input() public data: DirectionItem
 
   constructor() { }
 
@@ -83,14 +23,16 @@ export class MenuItemComponent implements OnInit {
     if (this.menuSize < 50) {
       this.columnCount = 1
     }
-
-    if (this.data.length && this.data[0].items.length) {
-      this.info = this.data[0].items[0];
-    }
   }
 
   public onHoverItem(elem) {
     this.info = elem;
+  }
+
+  public onShown(event) {
+    if (this.data && this.data.GROUPS) {
+      this.info = this.data.GROUPS[0].ITEMS[0];
+    }
   }
 
 }

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header';
 import { MenuModule } from './menu';
 import { FooterModule } from './footer';
+import { ProjectModule } from './project';
 
 import { HistoryComponent } from './history';
 import { MissionComponent } from './mission';
@@ -38,6 +39,7 @@ import { NavigatorComponent } from './navigator/navigator.component';
     MenuModule,
     NewsModule,
     MainModule,
+    ProjectModule,
     FooterModule,
     AppRoutingModule,
     NgxSmartModalModule.forRoot()

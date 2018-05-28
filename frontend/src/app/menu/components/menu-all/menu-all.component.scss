@@ -1,0 +1,22 @@
+
+
+.menu-popper-section:nth-child(1) {
+  width: 46%;
+
+  background-color: #F7F7FF;
+
+  & ul {
+    column-count: 2;
+  }
+}
+
+.menu-popper-section:nth-child(2) {
+  width: 27%
+}
+
+.menu-popper-section:nth-child(3) {
+  width: 27%;
+
+  background-color: #F7F7FF;
+}
+

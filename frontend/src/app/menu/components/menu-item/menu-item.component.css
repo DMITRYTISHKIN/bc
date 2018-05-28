@@ -32,5 +32,6 @@
   break-inside: avoid-column;
   counter-increment: item-counter;
   float: left;
+  width: 100%;
 }
 
