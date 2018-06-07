@@ -1,5 +1,6 @@
 import { Component, Inject, ViewEncapsulation, ElementRef, ViewChild,
   Renderer2, OnInit } from '@angular/core';
+  import { Router } from '@angular/router';
 
 import { MenuService } from './menu.service';
 import { MenuItem, GroupItem, DirectionItem } from './menu.model'
@@ -11,15 +12,17 @@ import { MenuItem, GroupItem, DirectionItem } from './menu.model'
   encapsulation: ViewEncapsulation.None
 })
 export class MenuComponent implements OnInit {
-  isOpenSearchInput = false;
+  @ViewChild('searchButton') searchButton: ElementRef;
+  @ViewChild('searchInputElem') searchInputElem: ElementRef;
+
   public data: DirectionItem[];
   public dataAll;
-
-  @ViewChild('searchInput') searchInput: ElementRef
+  public searchInput;
 
   constructor (
     public service: MenuService,
-    private _r: Renderer2
+    private _router: Router,
+    private _renderer: Renderer2
   ) {}
 
   ngOnInit() {
@@ -38,17 +41,26 @@ export class MenuComponent implements OnInit {
     });
   }
 
-  public onSearch($event) {
-    if (!this.isOpenSearchInput) {
-      this.isOpenSearchInput = true;
-      this.searchInput.nativeElement.focus();
-      let listenerFn = this._r.listen(this.searchInput.nativeElement, 'blur', (e) => {
-        if (e.relatedTarget === this._r.selectRootElement('.icon.icon-search')) {
-          return;
-        }
-        listenerFn();
-        this.isOpenSearchInput = false;
-      })
+  public onSubmit(e): void {
+    if (Boolean(this.searchInput)) {
+      this._router.navigate([`/search/${this.searchInput}`]);
     }
+  }
+
+  public onHoverInput(e): void {
+    this._renderer.addClass(this.searchButton.nativeElement, 'active');
+  }
+  public onLeaveInput(e): void {
+    this._renderer.removeClass(this.searchButton.nativeElement, 'active');
+  }
+
+  public onHoverButton(e): void {
+    let elem = this._renderer.selectRootElement(this.searchInputElem.nativeElement)
+    elem.focus();
+  }
+
+  public onLeaveSearch(e): void {
+    let elem = this._renderer.selectRootElement(this.searchInputElem.nativeElement)
+    elem.blur()
   }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { MenuItem } from '../../menu.model'
 
 @Component({
   selector: 'bc-menu-all',
@@ -7,11 +9,23 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MenuAllComponent implements OnInit {
 
+  @ViewChild('all') popper: any
+
   @Input() data = []
 
-  constructor() { }
+  constructor(
+    public _router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  public onClick(item: MenuItem) {
+    if (item.DESCRIPTION) {
+      return
+    }
+    this.popper.hide()
+    this._router.navigate([`/section/${item.ID}/page/1`]);
   }
 
 }

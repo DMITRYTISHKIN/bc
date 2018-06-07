@@ -170,13 +170,27 @@
   transition: 0.3s;
   opacity: 0;
   padding-right: 45px;
+  visibility: hidden;
 }
 
-.menu-search:hover .menu-search-input {
+.icon-search {
+  z-index: 1;
+}
+
+.icon-search:hover ~ .menu-search-input {
   background-color: white;
   opacity: 1;
+  visibility: visible;
 }
 
-.menu-search:hover .icon-search{
+.menu-search-input:hover,
+.menu-search-input:focus {
+  background-color: white;
+  opacity: 1;
+  visibility: visible;
+}
+
+.icon-search:hover,
+.icon-search.active {
   background-position: 0 -25px;
 }

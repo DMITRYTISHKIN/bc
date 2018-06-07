@@ -14,7 +14,13 @@
   cursor: pointer;
   color: #777777;
 
-  &:hover {
-    color: #FF7800;
+
+
+  & b {
+    font-weight: 400;
+
+    &:hover {
+      color: #FF7800;
+    }
   }
 }

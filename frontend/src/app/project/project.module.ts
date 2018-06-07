@@ -14,9 +14,6 @@ import { ProjectRoutingModule } from './project-routing.module';
   ],
   declarations: [
     ProjectComponent
-  ],
-  providers: [
-    ProjectService
   ]
 })
 export class ProjectModule { }

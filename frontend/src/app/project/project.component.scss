@@ -41,6 +41,7 @@
   text-align: justify;
   padding-top: 20px;
   line-height: 18px;
+  white-space: pre-wrap;
 }
 
 .project-content {
@@ -92,6 +93,20 @@
     background-color: transparent;
     width: 37px;
     height: 23px;
+    transition: opacity 0.5s;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}
+
+.project-same-container {
+  transition: opacity 0.5s;
+
+  &.loading {
+    opacity: 0.25;
   }
 }
 
@@ -101,6 +116,7 @@
   float: left;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 
   & img {
     min-width: 100%;

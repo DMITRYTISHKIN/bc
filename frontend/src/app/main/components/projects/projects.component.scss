@@ -3,27 +3,57 @@
   margin: 15px;
   float: left;
   cursor: pointer;
-  transition: 0.2s linear;
+  transition: 0.1s ease-in-out;
+  overflow: hidden;
 }
 
 .projects-item:hover {
   box-shadow: 0px 5px 15px #909090;
+
+  & .projects-description {
+    top: 0;
+    left: 0;
+  }
 }
 
 .projects-description {
   position: absolute;
   display: flex;
-  top: 0;
+  top: calc(100% - 27px);
+  left: calc(-100% + 75px);
   width: 100%;
   height: 100%;
   transition: 0.3s ease-out;
-  opacity: 0;
   color: #2B468B;
+  background-color: rgba(235, 235, 235, 0.9);
+
+  & h5 {
+    position: absolute;
+    font-weight: 700;
+    font-size: 15px;
+    width: 100%;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 3px 7px;
+
+    & b {
+      transition: opacity 0.1s ease-out;
+      opacity: 0;
+    }
+  }
 }
 
 .projects-description:hover {
-  background-color: rgba(235, 235, 235, 0.8);
-  opacity: 1;
+  & h5 {
+    color: #FF7800;
+    & b {
+      opacity: 1;
+    }
+  }
+
+  top: 0;
+  left: 0;
 }
 
 .projects-description div {
@@ -36,6 +66,10 @@
   margin: 5px 0;
   font-size: 20px;
   text-transform: uppercase;
+}
+
+.project-name.margin {
+  margin-top: 70px;
 }
 
 
@@ -80,7 +114,7 @@
 
 .projects-layout {
   overflow: hidden;
-  min-height: 500px;
+  min-height: 200px;
   position: relative;
 
   // &.loading:before {
@@ -117,7 +151,7 @@
   display: inline-block;
   width: 230px;
   margin: 0 15px;
-
+  z-index: 50;
 }
 
 .projects-select-themes.ng-select {
@@ -144,8 +178,38 @@
 .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
   padding: 4px 8px;
   font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  float: left;
+  width: 216px;
 
+  & .ng-option-label {
+    position: absolute;
+    white-space: nowrap;
+    transform: translateX(0);
+    transition: 1s linear;
+    min-width: 100%;
+    padding-right: 15px;
+  }
+
+
+
+  &:hover {
+
+    & .ng-option-label {
+      animation: trey 3s infinite;
+    }
+
+    @keyframes trey {
+      100%{
+        transform: translateX(calc(216px - 100%));
+      }
+    }
+  }
 }
+
+
 
 .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
   padding-left: 0;
@@ -174,6 +238,9 @@
   height: 27px;
   top: 27px;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .main-paginator {
@@ -182,4 +249,11 @@
   padding-top: 30px;
   text-align: center;
   clear: both;
+}
+
+.projects-empty {
+  color: #999;
+  font-size: 25px;
+  text-align: center;
+  padding: 50px 0;
 }

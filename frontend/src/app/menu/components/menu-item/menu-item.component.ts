@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { DirectionItem, MenuItem } from '../../menu.model'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bc-menu-item',
@@ -16,7 +17,11 @@ export class MenuItemComponent implements OnInit {
 
   @Input() public data: DirectionItem
 
-  constructor() { }
+  @ViewChild('production') popper: any
+
+  constructor(
+    public _router: Router
+  ) { }
 
   ngOnInit() {
     this.infoSize = 100 - this.menuSize;
@@ -33,6 +38,14 @@ export class MenuItemComponent implements OnInit {
     if (this.data && this.data.GROUPS) {
       this.info = this.data.GROUPS[0].ITEMS[0];
     }
+  }
+
+  public onClick(item: MenuItem) {
+    if (item.DESCRIPTION) {
+      return
+    }
+    this.popper.hide()
+    this._router.navigate([`/section/${item.ID}/page/1`]);
   }
 
 }

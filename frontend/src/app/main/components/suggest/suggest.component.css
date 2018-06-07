@@ -136,30 +136,29 @@
   width: 100%;
 
   margin: 10px 0 20px 0;
+  column-gap: 0;
+  column-count: 2;
+  counter-reset: item-counter;
 }
 
 .suggest ul li {
-  width: calc(50% - 10px);
-  float: left;
-
+  width: calc(100%);
+  break-inside: avoid-column;
+  counter-increment: item-counter;
   font-size: 15px;
   list-style: none;
   line-height: normal;
   cursor: pointer;
+  margin: 0 10px;
 
   border-bottom: solid 1px #EBEBEB;
   padding: 10px 0;
-  margin-right: 10px;
 }
 
 .suggest ul li:hover {
   color: #FF7800;
 }
 
-.suggest ul li:nth-child(2n) {
-  margin-left: 10px;
-  margin-right: 0px;
-}
 
 .suggest-button {
   width: 50%;
@@ -189,4 +188,60 @@
 
 .suggest-content {
   overflow: hidden;
+}
+
+.modal-how .modal-content p {
+  margin-bottom: 15px;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.modal-how .nsm-dialog.nsm-dialog-open {
+  max-width: 750px;
+}
+
+.modal-how .modal-content p b {
+  color: #FF7800;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.modal-how .modal-content .icon {
+  margin-right: 25px;
+  float: left;
+}
+
+.modal-how .modal-logo {
+  background: url(../../../../assets/images/modals/howwork.png) no-repeat;
+}
+
+.modal-how .modal-header {
+  color: white;
+  background-color: #2B468B;
+}
+
+.modal-logo {
+  width: 311px;
+  height: 155px;
+  margin: 0 auto;
+}
+
+.modal-header {
+  padding: 50px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal-title {
+  font-size: 25px;
+  margin: 15px 0;
+}
+.modal-content {
+  background-color: white;
+  overflow: hidden;
+  padding: 50px 70px;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: -10px;
 }

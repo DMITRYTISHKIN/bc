@@ -1,49 +1,46 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import { ProjectService } from './project.service';
+import { MainService } from '../main/main.service';
+import { Project } from './project.model';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.scss']
+  styleUrls: ['./project.component.scss'],
+  providers: [
+    ProjectService
+  ]
 })
 export class ProjectComponent implements OnInit {
+  public data: Project;
 
-  data = {
-    NAME: 'GLUEV',
-    ARTICLE: '7AK-01',
-    DESCRIPTION: 'Полиграфический дизайн каталогов "GLUEV"',
-    NOTE: 'Не следует, однако забывать, что консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Идейные соображения высшего порядка, а также консультация с широким активом требуют определения и уточнения существенных финансовых и административных условий.',
-    IMAGES: [
-      '../../assets/images/project/1.jpg',
-      '../../assets/images/project/2.jpg',
-      '../../assets/images/project/3.jpg'
-    ]
-  }
+  public loadingSimilar: boolean = false;
 
-  dataSame = [
-    {
-      NAME: "Название проекта",
-      SECTION: "Название раздела",
-      PREVIEW_IMAGE: "../../assets/images/project/same-1.jpg",
-    },
-    {
-      NAME: "Название проекта",
-      SECTION: "Название раздела",
-      PREVIEW_IMAGE: "../../assets/images/project/same-2.jpg",
-    },
-    {
-      NAME: "Название проекта",
-      SECTION: "Название раздела",
-      PREVIEW_IMAGE: "../../assets/images/project/same-3.jpg",
-    },
-  ]
-
-  constructor() { }
+  constructor(
+    private _route: ActivatedRoute,
+    private _mainService: MainService,
+    public service: ProjectService
+  ) { }
 
   ngOnInit() {
+    this.service.fetch(this._route.snapshot.paramMap.get('id'))
+    this.service.data$.subscribe((data) => {
+      this.data = data;
+    });
+
+    this.service.projectsSimilar$.subscribe(() => {
+      this.loadingSimilar = false;
+    })
   }
 
   public onTop(): void {
     window.scrollTo(0, 0);
   }
 
+  public onClickSimilar(section_id: string): void {
+    this.loadingSimilar = true;
+    this.service.fetchSimilar(section_id);
+  }
 }

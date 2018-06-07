@@ -256,8 +256,7 @@ export class NewsService {
   private _data$: BehaviorSubject<ResponseData> = new BehaviorSubject<ResponseData>(null);
   public data$: Observable<ResponseData> = this._data$
     .asObservable().pipe(
-      filter(item => item !== null),
-      delay(3000)
+      filter(item => item !== null)
     );
 
   public fetchData(page: number = 1, per: number = 8) {

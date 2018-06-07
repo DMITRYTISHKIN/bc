@@ -20,6 +20,7 @@
   float: left;
 
   margin-bottom: 40px;
+
 }
 
 .footer-contacts-pages div {
@@ -28,6 +29,14 @@
   float: left;
   border-bottom: 1px #485165 solid;
   padding: 7px 0;
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .footer-contacts-pages div:hover {

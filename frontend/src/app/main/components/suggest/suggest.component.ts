@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewEncapsulation, ViewChildren, ElementRef,
-  QueryList, Renderer2, AfterViewInit } from '@angular/core';
+  QueryList, Renderer2, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 
 import { NgxSmartModalService } from 'ngx-smart-modal';
+import { MenuService, MenuItem, DirectionItem } from '../../../menu';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 declare var $: any;
 
@@ -20,89 +23,22 @@ export class SuggestComponent implements OnInit, AfterViewInit {
     data: []
   };
   public data = {
-    production: [
-      {
-        NAME: 'dsadsad sadasd',
-        NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-      },
-      {
-        NAME: 'vcbvc nbcnc',
-        NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-      },
-      {
-        NAME: 'fgjgfhdhgdfsgdf ggg',
-        NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-      },
-      {
-        NAME: 'dsadsad sadasd',
-        NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-      },
-      {
-        NAME: 'vcbvc nbcnc',
-        NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-      },
-      {
-        NAME: 'fgjgfhdhgdfsgdf ggg',
-        NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-      },
-      {
-        NAME: 'vcbvc nbcnc',
-        NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-      },
-      {
-        NAME: 'fgjgfhdhgdfsgdf ggg',
-        NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-      },
-      {
-        NAME: 'vcbvc nbcnc',
-        NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-      },
-      {
-        NAME: 'fgjgfhdhgdfsgdf ggg',
-        NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-      },
-      {
-        NAME: 'vcbvc nbcnc',
-        NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-      },
-      {
-        NAME: 'fgjgfhdhgdfsgdf ggg',
-        NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-      }
-    ],
-    promotion: [
-      {
-        NAME: 'fgjgfhdhgdfsgdf ggg',
-        NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-      },
-      {
-        NAME: 'dsadsad sadasd',
-        NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-      },
-      {
-        NAME: 'fgjgfhdhgdfsgdf ggg',
-        NOTE: 'fdgfsd gfojig iofsdjgfio sjg sijogj fsogjfsioj gfios giosfjag iohfsg'
-      },
-      {
-        NAME: 'vcbvc nbcnc',
-        NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-      },
-
-      {
-        NAME: 'vcbvc nbcnc',
-        NOTE: 'sdafsd fgsdgfdgfsg gfsgfsdg fsgfsgf gfdhdfhgds'
-      },
-      {
-        NAME: 'dsadsad sadasd',
-        NOTE: 'sadf adsad dafrg fgdsaf sdsaf fewgf dsgfsd fdasfda'
-      }
-    ]
+    production: [],
+    promotion: []
   }
+
+  private _destroy: Subject<void> = new Subject();
 
   constructor(
     public dialog: NgxSmartModalService,
-    private _r: Renderer2
+    public menuService: MenuService,
+    private _r: Renderer2,
+    private _dt: ChangeDetectorRef
   ) { }
+
+  ngOnDestroy() {
+    this._destroy.next()
+  }
 
   ngOnInit() {
     $('.suggest-slider').slick({
@@ -111,7 +47,17 @@ export class SuggestComponent implements OnInit, AfterViewInit {
       arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
-      cssEase: 'linear'
+      cssEase: 'linear',
+      autoplay: true,
+      autoplaySpeed: 5000
+    });
+
+    this.menuService.dataAll$.pipe(
+      takeUntil(this._destroy)
+    ).subscribe((data) => {
+      this.data.production = data[0].ITEMS.slice(0, 11);
+      this.data.promotion = data[1].ITEMS.slice(0, 6)
+      this.setActiveDirection(this.suggestButtons.first.nativeElement, 'production');
     });
   }
 

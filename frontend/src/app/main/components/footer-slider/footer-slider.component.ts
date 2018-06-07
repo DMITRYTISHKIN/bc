@@ -16,7 +16,9 @@ export class FooterSliderComponent implements OnInit {
       dots: false,
       arrows: true,
       slidesToShow: 6,
-      slidesToScroll: 6
+      slidesToScroll: 6,
+      autoplay: true,
+      autoplaySpeed: 3000
     });
   }
 

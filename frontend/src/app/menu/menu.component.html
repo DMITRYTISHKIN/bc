@@ -9,17 +9,30 @@
       >{{ item.NAME }}</bc-menu-item>
       <!-- <bc-menu-item [menuSize]="35">Комплексные пакеты услуг</bc-menu-item> -->
     </nav>
-    <div class="menu-search">
+    <form
+      class="menu-search"
+      (ngSubmit)="onSubmit($event)"
+      (mouseleave)="onLeaveSearch($event)"
+    >
+      <button
+        #searchButton
+        type="submit"
+        class="icon icon-search"
+        (mouseenter)="onHoverButton($event)"
+        (mouseleave)="onHoverButton($event)"
+        (mouseover)="onHoverButton($event)"
+      ></button>
       <input
-        #searchInput
+        #searchInputElem
         class="menu-search-input"
+        [(ngModel)]="searchInput"
+        (focus)="onHoverInput($event)"
+        (blur)="onLeaveInput($event)"
+        name="searchInput"
         type="text"
       />
-      <button
-        (click)="onSearch($event)"
-        class="icon icon-search"
-      ></button>
-    </div>
+
+    </form>
   </div>
   <div id="menu-popper-container"></div>
 </div>

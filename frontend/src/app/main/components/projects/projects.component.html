@@ -1,5 +1,5 @@
 <div class="projects-content">
-  <h2>Примеры работ</h2>
+  <h2 class="project-name {{ sectionName !== 'Примеры работ' ? 'margin' : '' }}">{{ sectionName }}</h2>
   <div class="projects-container {{ isLoading ? 'loading' : '' }}">
     <div class="projects-toolbar">
       <ng-select
@@ -7,32 +7,48 @@
         [items]="menuService.sections$ | async"
         placeholder="Все творческие области"
         bindLabel="NAME"
-        bindValue="_id"
+        bindValue="ID"
+        dropdownPosition="bottom"
         [(ngModel)]="selectSection"
+        (change)="onSelectArea($event)"
       ></ng-select>
       <ng-select
+        *ngIf="selectSection"
         class="projects-select-themes"
-        [items]="themes"
+        [items]="service.themes$ | async"
         placeholder="Все специализации"
         bindLabel="NAME"
         bindValue="ID"
+        dropdownPosition="bottom"
         [(ngModel)]="selectTheme"
+        (change)="onSelectTheme($event)"
       ></ng-select>
     </div>
     <div class="projects-layout">
       <div clas="projects-sizer"></div>
+      <div class="projects-empty" *ngIf="data && !data.length && !searchInput">
+        Идёт наполнение контентом данного раздела.<br>
+        Выберите другой раздел или воспользуйтесь поиском.
+      </div>
+      <div class="projects-empty" *ngIf="data && !data.length && searchInput">
+        По данному запросу ничего не найдено.
+      </div>
       <div
         class="projects-item"
         *ngFor="let item of data"
-        [routerLink]="['/project/1']"
+
       >
-        <img src="{{ item.PREVIEW_IMAGE }}" />
+        <a
+          href="./project/{{ item.ID }}"
+          target="_blank"
+        ><img src="{{ item.PREVIEW_IMAGE }}" />
         <div class="projects-description">
           <div>
-            <p>{{ item.SECTION }}</p>
+            <h5><b>Арт. </b>{{ item.ARTICLE }}</h5>
+            <p>{{ item.NAME_SECTION }}</p>
             <h3>{{ item.NAME }}</h3>
           </div>
-        </div>
+        </div></a>
       </div>
     </div>
     <div class="main-paginator">
@@ -43,10 +59,10 @@
         (changePage)="goTo($event)"
       ></shared-paginator>
     </div>
-    <div class="projects-search">
-      <input type="text" placeholder="Поиск по сайту" />
-      <div class="icon icon-searchful"></div>
-    </div>
+    <form class="projects-search" (ngSubmit)="onSubmit($event)">
+      <input [(ngModel)]="searchInput" name="searchInput" type="text" placeholder="Поиск по сайту" />
+      <button type="submit" class="icon icon-searchful"></button>
+    </form>
     <div class="main-spinner {{ isLoading ? 'loader' : '' }}"></div>
   </div>
 </div>

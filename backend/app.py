@@ -6,7 +6,7 @@ from encoder import UUIDEncoder
 
 app = Eve(
     auth = None,
-    settings = SETTINGS,
+    settings = SETTINGS
 )
 
 if __name__ == '__main__':

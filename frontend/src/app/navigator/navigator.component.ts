@@ -16,8 +16,6 @@ export class NavigatorComponent implements OnInit {
 
   public activeRoute: route[] = [];
 
-  public error = false;
-
   constructor(
     private _router: Router
   ) { }
@@ -31,17 +29,28 @@ export class NavigatorComponent implements OnInit {
         .split('/')
         .filter((item: string) => item.length)
         .forEach((item: string) => {
-          if (activeRoute.length) {
+          if (activeRoute.length > 0) {
+            return;
+          }
+
+          let name = this.getName(item);
+
+          if (activeRoute.length && Boolean(name)) {
             let path = `${activeRoute[activeRoute.length - 1]}/${item}`;
-            activeRoute.push({
-              NAME: this.getName(item),
-              ROUTE: path
-            });
-          } else {
-            activeRoute.push({
-              NAME: this.getName(item),
-              ROUTE: item
-            });
+
+            if (Boolean(name)) {
+              activeRoute.push({
+                NAME: name,
+                ROUTE: path
+              });
+            }
+          } else if (Boolean(name)) {
+            if (Boolean(name)) {
+              activeRoute.push({
+                NAME: name,
+                ROUTE: item
+              });
+            }
           }
         });
 
@@ -52,7 +61,6 @@ export class NavigatorComponent implements OnInit {
 
 
   public getName(route: string): string {
-    this.error = false;
     let key: any = route.match(/(.*);/);
 
     if (key) {
@@ -74,8 +82,12 @@ export class NavigatorComponent implements OnInit {
         return 'Пожелания и благодарности'
       case 'project':
         return 'Проект'
-      default:
-        this.error = true;
+      case 'page':
+        return 'Проекты'
+      case 'section':
+        return 'Проекты'
+      case 'search':
+        return 'Поиск'
     }
   }
 }

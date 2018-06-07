@@ -5,18 +5,18 @@ import { HttpResponse, HttpClient } from '@angular/common/http';
 
 import { MenuItem, GroupItem, DirectionItem, ResponseData } from './menu.model';
 
+const URL = 'http://brandclick.dmitrytishkin.ru';
+
 @Injectable()
 export class MenuService {
-
-
   private _data$: BehaviorSubject<DirectionItem[]> = new BehaviorSubject(null);
   public data$: Observable<DirectionItem[]> = this._data$
     .asObservable().pipe(
       filter(item => item !== null)
     );
 
-  private _dataAll$: BehaviorSubject<DirectionItem[]> = new BehaviorSubject(null);
-  public dataAll$: Observable<DirectionItem[]> = this._dataAll$
+  private _dataAll$: BehaviorSubject<any[]> = new BehaviorSubject(null);
+  public dataAll$: Observable<any[]> = this._dataAll$
     .asObservable().pipe(
       filter(item => item !== null)
     );
@@ -27,12 +27,11 @@ export class MenuService {
     filter(item => item !== null)
   );
 
-
   public fetchSections() {
     combineLatest(
-      this._http.get('http://127.0.0.1:5000/api/directions'),
-      this._http.get('http://127.0.0.1:5000/api/groups'),
-      this._http.get('http://127.0.0.1:5000/api/sections')
+      this._http.get(`${URL}/api/directions`),
+      this._http.get(`${URL}/api/groups`),
+      this._http.get(`${URL}/api/sections`)
     ).subscribe((resp: any) => {
       // TODO: Перенести на сервер
       let directions = resp[0]._items;
@@ -68,22 +67,48 @@ export class MenuService {
         }
       });
 
+      this._dataAll$.next(data.map((direction: DirectionItem) => {
+        return {
+          ITEMS: direction.GROUPS.reduce((arr, group) => {
+            return arr.concat(group.ITEMS);
+            }, []),
+          NAME: direction.NAME
+        };
+      }));
+
       this._data$.next(data);
-      this._sections$.next(sections.filter(section => !Boolean(section.DESCRIPTION)));
+
+      let _sections = [
+        {
+          ID: undefined,
+          NAME: 'Все творческие области',
+        },
+        ...sections
+      ];
+
+      this._sections$.next(
+        _sections
+          .filter(section => !Boolean(section.DESCRIPTION))
+          .map((section) => {
+            return <MenuItem>{
+              ID: section._id,
+              NAME: section.NAME,
+              NOTE: section.NOTE,
+              DESCRIPTION: section.DESCRIPTION
+            }
+          })
+      );
     });
   }
 
-  // public fetchData(page: number = 1, per: number = 12) {
-  //   let begin = (page * per + 1) - per;
-  //   let end = begin + per;
-  //   let data = <HttpResponse<ResponseData<MenuItem>>>{
-  //     body: {
-  //       data: this._data.slice(begin, end),
-  //       totalCount: this._data.length
-  //     }
-  //   }
-  //   this._data$.next(data.body)
-  // }
+  public getNameSection(id_section: string): string {
+    let sections = this._sections$.getValue();
+    if (id_section && sections) {
+      return sections.find(item => item.ID === id_section).NAME;
+    } else {
+      return ''
+    }
+  }
 
   constructor(
     private _http: HttpClient

@@ -25,6 +25,7 @@
           <li
             *ngFor="let item of group.ITEMS"
             (mouseenter)="onHoverItem(item)"
+            (click)="onClick(item)"
           >{{ item.DESCRIPTION || item.NAME }}</li>
         </ul>
       </div>

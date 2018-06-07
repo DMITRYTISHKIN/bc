@@ -21,11 +21,12 @@
 }
 
 .menu-popper-info h5 {
-  color: black;
+  color: #FF7800;
 }
 
 .menu-popper-info p {
   line-height: normal;
+  white-space: pre-wrap;
 }
 
 .menu-popper-group {
